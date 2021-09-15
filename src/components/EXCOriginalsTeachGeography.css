@@ -1,0 +1,133 @@
+#carAnimationFrame {
+  position: relative;
+  height: 20rem;
+  width: 50%;
+  overflow: hidden;
+  border-bottom: solid var(--menu-color) 1rem;
+}
+
+#car img {
+  position: absolute;
+  bottom: -7rem;
+
+  width: auto;
+  height: 20rem;
+  filter: brightness(600%) invert();
+
+  animation: carAnimation 0.12s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#lamp {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 10%;
+  z-index: -1;
+  right: -100%;
+
+  filter: invert() opacity(0.3);
+
+  animation: lampsAnimation 2s infinite;
+}
+#light {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 30%;
+  right: -100%;
+  z-index: 1;
+  transform: translateX(-7.5rem);
+  opacity: 0.7;
+
+  animation: lampsAnimation 2s infinite;
+}
+
+#city {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+#city img {
+  filter: blur(3px);
+}
+
+#locationQR {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20rem;
+  width: 50%;
+}
+
+#locationQR p {
+  cursor: default;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: var(--primary-text-color);
+  margin: 1rem;
+  z-index: -1;
+
+  opacity: 0;
+  transform: translateX(-10rem);
+  transition-delay: 0.5s;
+  transition: transform 1s;
+}
+
+#locationCard {
+  display: flex;
+  justify-content: center;
+  height: 16rem;
+  width: 16rem;
+  margin: auto auto 0 auto;
+  background-color: var(--primary-text-color);
+  border-radius: 24px;
+}
+
+#locationCard img {
+  height: 100%;
+  align-self: center;
+  width: auto;
+  margin: auto;
+}
+
+@keyframes carAnimation {
+  0% {
+    bottom: -7rem;
+  }
+
+  100% {
+    bottom: -7.1rem;
+  }
+}
+
+@keyframes lampsAnimation {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 200%;
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  #carAnimationFrame {
+    width: 100%;
+  }
+
+  #locationQR {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #locationCard {
+    margin: 0 auto auto auto;
+  }
+}

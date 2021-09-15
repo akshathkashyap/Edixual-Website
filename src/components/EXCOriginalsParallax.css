@@ -1,0 +1,35 @@
+.parallax {
+  display: flex;
+  justify-content: center;
+  height: 200vh;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax a {
+  height: max-content;
+  width: max-content;
+}
+
+.parallax a img {
+  cursor: pointer;
+  height: 200px;
+  width: auto;
+}
+
+.parallax #exploreBtn{
+  cursor: pointer;
+  position: absolute;
+  font-size: calc(1rem + 8px);
+  height: auto;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  transform: translateY(-50vh);
+  padding: 0.75rem;
+  background-color: var(--primary-text-color);
+  border: none;
+  border-radius: 24px;
+}

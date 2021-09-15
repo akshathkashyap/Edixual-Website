@@ -1,0 +1,70 @@
+.videos .section-title::before {
+  content: "";
+  position: absolute;
+  justify-content: center;
+  background-color: var(--primary-text-color);
+  right: -1rem;
+  height: 6rem;
+  width: 2px;
+}
+
+.videos {
+  position: relative;
+  text-align: right;
+}
+
+.video-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.video-grid #videoBtnCtn {
+  position: absolute;
+  width: 9rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.video-grid #viewAll {
+  cursor: pointer;
+  position: sticky;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  top: 10vh;
+  right: 0;
+  height: 3rem;
+  width: 9rem;
+  padding: auto;
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+  border: none;
+
+  transition: top 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.video-grid iframe {
+  height: 35vw;
+  width: calc(35vw * 16 / 9);
+  margin: 0 2.5% 10vh 2.5%;
+}
+
+@media only screen and (max-width: 815px) {
+  .videos .section-title::before {
+    height: 4rem;
+  }
+
+  .video-grid iframe {
+    height: calc(90vw * 9 / 16);
+    width: 90vw;
+  }
+}

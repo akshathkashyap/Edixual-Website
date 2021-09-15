@@ -1,0 +1,147 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: 3% 97%;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  overflow-x: hidden;
+
+  transition: left 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.nav-open {
+  left: 0;
+}
+
+.nav-close {
+  left: 97%;
+}
+
+.open-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 100% 0 0 100%;
+  background-color: rgba(255, 255, 255, 0.87);
+  overflow: hidden;
+}
+
+.open-nav button{
+  cursor: pointer;
+  position: absolute;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--secondary-text-color);
+  transition: color 0.5s;
+}
+
+.nav-close #navBtn:hover {
+  color: var(--accent-color) !important;
+}
+
+.nav-open #navBtn:hover {
+  color: var(--danger-color) !important;
+}
+
+.navbar nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 30px;
+  backdrop-filter: blur(15px) brightness(50%);
+}
+
+.navbar nav a {
+  align-self: flex-end;
+  text-decoration: none;
+  width: max-content;
+}
+
+.nav-title {
+  position: relative;
+  cursor: pointer;
+  align-self: flex-end;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2.5rem;
+  text-align: left;
+  width: max-content;
+  color: var(--secondary-text-color);
+  transition: color 0.5s;
+}
+
+.nav-title:hover {
+  color: var(--primary-text-color);
+}
+
+.nav-title::after{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  transition: width 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav-title:hover::after{
+  width: 100%;
+}
+
+.nav-brand-links {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.nav-brand-links img {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 3rem;
+  filter: invert();
+  transition: 0.25s;
+}
+
+.nav-brand-links img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 815px) {
+  .navbar {
+    display: block;
+  }
+
+  .open-nav {
+    display: none;
+  }
+
+  .nav-close {
+    left: 100%;
+  }
+
+  .nav-title {
+    pointer-events: none;
+    margin: 5vh 0;
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+  }
+  .nav-brand-links {
+    margin: 10vh 0;
+  }
+
+  .nav-brand-links img {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 5%;
+  }
+}

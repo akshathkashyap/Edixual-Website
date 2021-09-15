@@ -1,0 +1,178 @@
+.banner-container {
+  position: relative;
+  display: flex;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  height: calc(90vw / 2.39);
+  width: 90vw;
+  overflow-x: hidden;
+}
+
+.banner {
+  flex-shrink: 0;
+
+  position: relative;
+  scroll-snap-align: center;
+  height: calc(90vw / 2.39);
+  width: 90vw;
+  overflow: hidden;
+}
+
+.banner-img {
+  position: relative;
+  height: calc(90vw / 2.39);
+  width: 90vw;
+  object-fit: cover;
+}
+
+.banner-des {
+  cursor: default;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14rem;
+  padding: 2rem;
+  color: var(--primary-text-color);
+  border-radius: 10px;
+  backdrop-filter: blur(5px) brightness(50%);
+
+  transition: 0.5s;
+}
+
+.banner-des.hidden {
+  transform: translateX(100%);
+}
+
+.banner-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  height: auto;
+  padding: 0.25rem;
+  border: none;
+  background: none;
+  color: var(--secondary-text-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+
+.banner-btn:hover {
+  transform: scale(1.25);
+  color: var(--primary-text-color);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.banner-btn.left {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.banner-btn.top {
+  top: 0;
+  border-radius: 0 0 0 8px !important;
+  padding: 1rem;
+}
+
+.banner-btn.right {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.banner-info-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: auto;
+  width: 100%;
+}
+
+.banner-card {
+  position: relative;
+  height: 20vw;
+  width: 20vw;
+  margin: 5vw;
+}
+
+.banner-dp {
+  height: 20vw;
+  width: 20vw;
+  object-fit: cover;
+}
+
+.banner-name {
+  cursor: default;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color: var(--secondary-text-color);
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.banner-card-des {
+  display: none;
+  font-family: 'Comfortaa', cursive;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 815px) {
+  .banner-container {
+    display: none;
+  }
+
+  .banner-info-container {
+    flex-flow: row;
+    flex-wrap: nowrap;
+
+    scroll-snap-type: x mandatory;
+    width: 80vw;
+    overflow-x: auto;
+  }
+
+  .banner-card {
+    flex-shrink: 0;
+
+    scroll-snap-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 5vw;
+    overflow-x: auto;
+  }
+
+  .banner-card:first-child {
+    margin-left: 0;
+  }
+
+  .banner-card:last-child {
+    margin-right: 0;
+  }
+
+  .banner-dp {
+    height: auto;
+    width: 100%;
+  }
+
+  .banner-name {
+    position: relative;
+    top: 0;
+    color: var(--primary-text-color);
+  }
+
+  .banner-card-des {
+    position: relative;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .banner-container, .banner, .banner-img {
+    height: calc(1366px / 2.39);
+    width: 1366px;
+  }
+}

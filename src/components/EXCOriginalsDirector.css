@@ -1,0 +1,126 @@
+.director .section-title::before {
+  content: "";
+  position: absolute;
+  justify-content: center;
+  background-color: var(--primary-text-color);
+  left: -1rem;
+  height: 6rem;
+  width: 2px;
+}
+
+.director-img-container {
+  display: flex;
+  flex: 45%;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 75vh;
+  width: auto;
+}
+
+.director-img-container p {
+  cursor: default;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: var(--primary-text-color);
+  margin: 1rem;
+  z-index: -1;
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition-delay: 0.5s;
+  transition: transform 1s, opacity 1s;
+}
+
+.img-wrapper {
+  height: 75vh;
+  width: calc(75vh * 3 / 4);
+  overflow: hidden;
+}
+
+.director-img-container img {
+  height: 75vh;
+  width: auto;
+  filter: grayscale();
+  transition: transform 0.5s, filter 0.75s;
+}
+
+.director-img-container img:hover {
+  transform: scale(1.3);
+}
+
+.director-about-container {
+  flex: 45%;
+
+  margin: auto;
+}
+
+.director-about-container p {
+  cursor: default;
+  position: relative;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  line-height: 1.6;
+  max-width: 40rem;
+  margin: 0 24px;
+  z-index: -1;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s, opacity 1s;
+}
+
+@media only screen and (max-width: 815px) {
+  .director .section-title::before {
+    height: 4rem;
+  }
+
+  .director-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 100%;
+  }
+
+  .director-img-container p {
+    display: none;
+  }
+
+  .img-wrapper {
+    height: calc(80vw * 4 / 3);
+    width: 80vw;
+  }
+
+  .director-img-container img {
+    height: calc(80vw * 4 / 3);
+  }
+
+  .director-about-container p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 5vh 0;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .img-wrapper {
+    height: 800px;
+    width: 600px;
+    overflow: hidden;
+  }
+
+  .director-img-container img {
+    height: 800px;
+    width: auto;
+    filter: grayscale();
+    transition: transform 0.5s, filter 0.75s;
+  }
+
+  .director-about-container {
+    margin: 15% auto auto auto;
+  }
+}

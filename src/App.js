@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import LandingPage from './components/LandingPage'
+import EXCOriginals from './components/EXCOriginals'
+import EXCOriginalsPhotoAlbum from './components/EXCOriginalsPhotoAlbum'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={ LandingPage } />
+        <Route exact path='/EXCOriginals' component={ EXCOriginals } />
+        <Route exact path='/EXCOriginals/WhoAreWe' component={ EXCOriginals } />
+        <Route exact path='/EXCOriginals/WhatHaveWeDone' component={ EXCOriginals } />
+        <Route exact path='/EXCOriginals/WhatHaveWeDone/Photos/:albumLink' component={ EXCOriginalsPhotoAlbum } />
+        <Route exact path='/EXCOriginals/HowToReachUs' component={ EXCOriginals } />
+        <Route exact path='/EXCOriginals/ComingUpNext' component={ EXCOriginals } />
+      </Switch>
+    </Router>
   );
 }
 

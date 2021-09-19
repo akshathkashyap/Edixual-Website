@@ -31,14 +31,50 @@ function EXCOriginalsParallax() {
 
     requestAnimationFrame(animation)
   }
+  const parallaxScrollHandler = () => {
+    const parallax = document.querySelector('.parallax')
+    const parallaxHeight = parallax.getBoundingClientRect().height
+    const parallaxLayers = document.querySelectorAll('.parallax-layer')
+    const pixelsScrolled = window.pageYOffset
+    const perspective = 0.15
+    parallaxLayers.forEach((layer, i) => {
+      layer.style.transform = `translateY(${pixelsScrolled * (1 - (perspective * (parallaxLayers.length - 1 - i)))}px)`
+    })
+  }
+  const activateMobile = () => {
+    const parallax = document.querySelector('.parallax')
+    const parallaxLayers = document.querySelectorAll('.parallax-layer')
+    if (window.innerWidth <= 815) {
+      parallaxLayers.forEach((layer, i) => {
+        layer.style.display = 'none'
+      })
+      parallax.style.backgroundImage = `url('${process.env.PUBLIC_URL + '/images/parallaxBackground.jpg'}')`
+      window.removeEventListener('scroll', parallaxScrollHandler)
+    } else {
+      parallaxLayers.forEach((layer, i) => {
+        layer.style.display = 'block'
+      })
+      parallax.style.backgroundImage = `none`
+      window.addEventListener('scroll', parallaxScrollHandler)
+    }
+  }
 
   useEffect(() => {
-    const parallax = document.querySelector('.parallax')
-    parallax.style.backgroundImage = `url('${process.env.PUBLIC_URL + '/images/parallaxBackground.jpg'}')`
+    activateMobile()
+    window.addEventListener('resize', activateMobile)
+    return () => {
+      window.removeEventListener('resize', activateMobile)
+    }
   })
 
   return (
     <div className="parallax">
+      <img id="layer0" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer0.png' } alt="Parallax Layer" />
+      <img id="layer1" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer1.png' } alt="Parallax Layer" />
+      <img id="layer2" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer2.png' } alt="Parallax Layer" />
+      <img id="layer3" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer3.png' } alt="Parallax Layer" />
+      <img id="layer4" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer4.png' } alt="Parallax Layer" />
+      <img id="layer5" className="parallax-layer" src={ process.env.PUBLIC_URL + '/images/parallaxLayer5.jpg' } alt="Parallax Layer" />
       <Link to='/EXCOriginals'>
         <img src={ process.env.PUBLIC_URL + '/images/excoLogo_White.png' } alt="EXC Originals" />
       </Link>

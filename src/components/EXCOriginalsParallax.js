@@ -36,7 +36,7 @@ function EXCOriginalsParallax() {
     const parallaxHeight = parallax.getBoundingClientRect().height
     const parallaxLayers = document.querySelectorAll('.parallax-layer')
     const pixelsScrolled = window.pageYOffset
-    const perspective = 0.15
+    const perspective = 0.12
     parallaxLayers.forEach((layer, i) => {
       layer.style.transform = `translateY(${pixelsScrolled * (1 - (perspective * (parallaxLayers.length - 1 - i)))}px)`
     })

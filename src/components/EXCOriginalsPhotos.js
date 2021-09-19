@@ -81,7 +81,7 @@ function EXCOriginalsPhotos() {
     const focusInfo = document.querySelectorAll('.carousel-info-slider h2')[albumIndex]
     infoSlider.scrollLeft = focusInfo.offsetLeft - (infoSliderWidth / 2) + (infoWidth / 2)
     document.querySelectorAll('.carousel-info-slider h2').forEach((info, i) => {
-      info.style.color = 'var(--secondary-text-color)'
+      info.style.color = 'var(--hover-color)'
     })
     focusInfo.style.color = 'var(--primary-text-color)'
   }

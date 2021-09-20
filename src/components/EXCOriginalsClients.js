@@ -17,25 +17,7 @@ function EXCOriginalsClients() {
                 "https://www.youtube.com/c/Subtlesleeves",
                 "https://www.aegonlife.com/",
                 "https://www.timexindia.com/",]
-  useEffect(() => {
-    document.addEventListener('scroll', scrollHandler)
-    return () => {
-      document.removeEventListener('scroll', scrollHandler)
-    }
-  })
-  useEffect(() => {
-    var clients = document.querySelectorAll('.client')
-    clients.forEach((client) => {
-      client.addEventListener('mouseover', () => hoverHandler(true))
-      client.addEventListener('mouseout', () => hoverHandler(false))
-    })
-    return () => {
-      clients.forEach((client) => {
-        client.removeEventListener('mouseover', hoverHandler)
-        client.removeEventListener('mouseout', hoverHandler)
-      })
-    }
-  })
+
   const clickHandler = (link) => {
     window.open(clientsLinks[link])
   }
@@ -56,6 +38,26 @@ function EXCOriginalsClients() {
       client.style.color = 'var(--secondary-text-color)'
     }
   }
+
+  useEffect(() => {
+    document.addEventListener('scroll', scrollHandler)
+    return () => {
+      document.removeEventListener('scroll', scrollHandler)
+    }
+  })
+  useEffect(() => {
+    var clients = document.querySelectorAll('.client')
+    clients.forEach((client) => {
+      client.addEventListener('mouseover', () => hoverHandler(true))
+      client.addEventListener('mouseout', () => hoverHandler(false))
+    })
+    return () => {
+      clients.forEach((client) => {
+        client.removeEventListener('mouseover', hoverHandler)
+        client.removeEventListener('mouseout', hoverHandler)
+      })
+    }
+  })
 
   return (
     <div className="clients section-container">

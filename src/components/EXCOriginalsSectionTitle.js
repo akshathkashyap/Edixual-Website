@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import EXCOriginalsSectionCall from './EXCOriginalsSectionCall'
 
 import './EXCOriginalsSectionTitle.css'
@@ -14,17 +14,25 @@ function EXCOriginalsSectionTitle(props) {
     },
     {
       "secTitle" : "What have we done?",
-      "secTitleInfo" : "EXC Originals is a subsidiary of EdiXual Creations ,established on 20th October 2019, and was created to take up out-of-the-box, unconventional and revolutionary projects that we believed in or for our content creators to lose their inhibitions and just let their creative imaginations run wild."
+      "secTitleInfo" : "The idea has always been to create pieces of art that add value to the world. We shoot, edit and promote all kinds of filmography projects. Short of creating full length movies, we can cater to any kind of creative aesthetics. May it be photo-shoots, movie stills, or artist portfolios, we do it all."
     },
     {
       "secTitle" : "How to reach us?",
-      "secTitleInfo" : "Come, have cup of coffee"
+      "secTitleInfo" : "You are just one phone call or email away from hiring the dream team for your project."
     },
     {
       "secTitle": "Coming up next!",
-      "secTitleInfo": "This is the plan so far... Got something for us?"
+      "secTitleInfo": "The EdiXual Creation pipeline has a new exciting project ready for release, watch this space for more updates."
     }
   ]
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  })
 
   return (
     <>

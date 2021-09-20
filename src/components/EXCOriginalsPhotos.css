@@ -121,7 +121,7 @@
 
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: var(--secondary-text-color);
+  color: var(--hover-color);
   margin: 2rem 2rem;
   width: 10rem;
 
@@ -130,6 +130,14 @@
 
 .carousel-info-slider h2:hover {
   color: var(--primary-text-color) !important;
+}
+
+.carousel-info-slider h2:first-child {
+  margin-left: 50%;
+}
+
+.carousel-info-slider h2:last-child {
+  margin-right: 50%;
 }
 
 @media only screen and (max-width: 815px) {

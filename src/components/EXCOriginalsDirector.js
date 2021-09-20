@@ -55,7 +55,7 @@ function EXCOriginalsDirector() {
         </div>
       </div>
       <div className="director-about-container">
-        <p>Recently turned 22, Aniket Sritava was born with a brilliant inquisitive mind. His passion for learning new things has made him diverse, vibrant and versatile when it comes to Film-making and Direction.</p>
+        <p>Aniket Sritava has been the strongest pillar on which EdiXual was built on. With his inertly inquisitive mind, he has managed to excel in a wide range of skills. When asked how he manages to do all that, he says<br /><br /><strong>“I’m just trying to create a movie called LIFE.”</strong></p>
       </div>
     </div>
   )

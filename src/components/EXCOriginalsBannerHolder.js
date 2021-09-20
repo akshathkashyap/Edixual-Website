@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './EXCOriginalsBannerHolder.css'
 
 function EXCOriginalsBannerHolder() {
   const bannerData = [
     {"index": 0,
-    "bannerName": "Back to the future",
-    "bannerSrc": "https://c4.wallpaperflare.com/wallpaper/772/72/890/fiction-collage-poster-art-wallpaper-preview.jpg",
-    "bannerDPSrc": "https://c4.wallpaperflare.com/wallpaper/772/72/890/fiction-collage-poster-art-wallpaper-preview.jpg",
-    "des": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."},
+    "bannerName": "Looop Lapeta",
+    "bannerSrc": "CULoopLapeta.jpg",
+    "bannerDPSrc": "CULoopLapeta.jpg",
+    "des": "Looop Lapeta is an upcoming Bollywood film directed by Aakash Bhatia and jointly produced by Sony Pictures Films India, Ellipsis Entertainment and Aayush Maheshwari. It features Taapsee Pannu and Tahir Raj Bhasin in the lead roles. It is scheduled for release on 22 October 2021.",
+    },
     {"index": 1,
-    "bannerName": "Star Wars",
-    "bannerSrc": "https://c4.wallpaperflare.com/wallpaper/776/18/529/star-wars-the-force-awakens-film-posters-movie-poster-collage-wallpaper-preview.jpg",
-    "bannerDPSrc": "https://c4.wallpaperflare.com/wallpaper/776/18/529/star-wars-the-force-awakens-film-posters-movie-poster-collage-wallpaper-preview.jpg",
-    "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",},
+    "bannerName": "Tape Recorder",
+    "bannerSrc": "CUTapeRecorder.jpg",
+    "bannerDPSrc": "CUTapeRecorder.jpg",
+    "des": "Tape Recorder is an upcoming Indian Short Film directed by Aniket Sritava, produced by EXC Originals. It is planned to be released by Jan 2022.",
+    },
     {"index": 2,
-    "bannerName": "Interstellar",
-    "bannerSrc": "https://c4.wallpaperflare.com/wallpaper/775/852/888/adventure-film-futuristic-interstellar-wallpaper-preview.jpg",
-    "bannerDPSrc": "https://c4.wallpaperflare.com/wallpaper/775/852/888/adventure-film-futuristic-interstellar-wallpaper-preview.jpg",
-    "des": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",},
+    "bannerName": "Year-End Mashup (2021)",
+    "bannerSrc": "CUYearEndMashup(2021).png",
+    "bannerDPSrc": "CUYearEndMashup(2021).png",
+    "des": "Year-End Mashup by Sush & Yohan is a grand project made every year! Year-End Mashup 2020 received 1.3 million views 60k+ likes to date. EXC Originals in collaboration with various visual editors come together to bring the project to life.",
+    },
   ]
   const nextBanner = (scroll) => {
     const bannerCont = document.querySelector('.banner-container')
@@ -62,13 +65,29 @@ function EXCOriginalsBannerHolder() {
     }
   }
 
+  useEffect(() => {
+    const bannerCont = document.querySelector('.banner-container')
+    bannerCont.addEventListener('mouseenter', () => {
+      window.clearTimeout( timer )
+    })
+    bannerCont.addEventListener('mouseleave', () => {
+      timer = setTimeout(carouselAutoScroll, 4000)
+    })
+    var timer
+    const carouselAutoScroll = () => {
+      nextBanner(true)
+      timer = setTimeout(carouselAutoScroll, 2500)
+    }
+    carouselAutoScroll()
+  })
+
   return (
     <div className="section-container">
       <div className="banner-container">
         {bannerData.map((banner) => {
           return (
             <div className="banner" key={`banner${banner.index}`}>
-              <img className="banner-img" src={banner.bannerSrc} alt="Banner Image"/>
+              <img className="banner-img" src={ process.env.PUBLIC_URL + `/images/${banner.bannerSrc}` } alt="Banner Image"/>
               <p className="banner-des hidden">{banner.des}</p>
               <button className="banner-btn left" onClick={() => nextBanner(false)}>&#x276E;</button>
               <button className="banner-btn top right" onClick={toggleInfo}>i</button>
@@ -81,7 +100,7 @@ function EXCOriginalsBannerHolder() {
         {bannerData.map((banner) => {
           return (
             <div className="banner-card" key={`banner${banner.index}info`}>
-              <img className="banner-dp" src={banner.bannerDPSrc} alt="Banner Display Picture"/>
+              <img className="banner-dp" src={ process.env.PUBLIC_URL + `/images/${banner.bannerDPSrc}` } alt="Banner Display Picture"/>
               <p className="banner-name">{banner.bannerName}</p>
               <p className="banner-card-des">{banner.des}</p>
             </div>

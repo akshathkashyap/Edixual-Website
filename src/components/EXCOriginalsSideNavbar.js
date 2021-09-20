@@ -36,32 +36,10 @@ function EXCOriginalsSideNavbar(props) {
       body.style.overflow = 'auto'
     }
   }
-  // const getWindowWidth = () => {
-  //   if (window.innerWidth > 815) {
-  //     document.addEventListener('mousemove', mousemoveHandler)
-  //   } else {
-  //     document.removeEventListener('mousemove', mousemoveHandler)
-  //   }
-  // }
-  // const mousemoveHandler = (event) => {
-  //   console.log(`mouse position: ${event.x}:${event.y}`);
-  //   if (window.innerWidth * 0.97 <= event.x ) {
-  //     let navbar = document.querySelector('.nav-close')
-  //     navbar.style.left = '97%'
-  //     document.removeEventListener('mousemove', mousemoveHandler)
-  //   }
-  // }
   useEffect(() => {
     toggleNav(navBarOpen)
     disableScroll(navBarOpen)
   })
-  // useEffect(() => {
-  //   getWindowWidth()
-  //   window.addEventListener('resize', getWindowWidth)
-  //   return () => {
-  //     window.removeEventListener('resize', getWindowWidth)
-  //   }
-  // })
 
   return (
     <div className="navbar nav-close">

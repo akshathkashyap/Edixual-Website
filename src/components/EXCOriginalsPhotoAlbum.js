@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import './EXCOriginalsPhotoAlbum.css'
 
 function EXCOriginalsPhotoAlbum() {
   const { albumLink } = useParams()
-  const albums = ["VickyKaushalAegonLifeInsurance", "AnkurRathee", "RaghavMeattle", "AlviraPhotoshoot", "KanikaPhotoshoot", "MumbaiStreetPhotography", "FoodPhotography"]
+  const albums = ["VickyKaushalAegonLifeInsurance", "AnkurRathee", "RaghavMeattle", "AlviraPhotoshoot", "KanikaPhotoshoot", "MumbaiStreetPhotography", "FoodPhotography", "MadhusmitaDas"]
   const albumIndex = albums.indexOf(albumLink)
   const albumData = [
     {
@@ -43,6 +43,11 @@ function EXCOriginalsPhotoAlbum() {
       "albumPre" : "FP",
       "albumSize" : "10"
     },
+    {
+      "albumName": "Madhusmita Das, Actress",
+      "albumPre" : "MD",
+      "albumSize" : "9"
+    },
   ]
 
   const makeAlbumPhotoList = () => {
@@ -55,6 +60,10 @@ function EXCOriginalsPhotoAlbum() {
     return albumPhotoList
   }
   const albumPhotoList = makeAlbumPhotoList()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <div className="album section-container">

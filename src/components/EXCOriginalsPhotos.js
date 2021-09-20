@@ -40,6 +40,11 @@ function EXCOriginalsPhotos() {
       "albumName": "Food Photography",
       "albumLink": "FoodPhotography",
     },
+    {
+      "albumIndex": "7",
+      "albumName": "Madhusmita Das, Actress",
+      "albumLink": "MadhusmitaDas",
+    },
   ]
   const handleScrollAnimation = () => {
     const viewportWidth = window.innerWidth
@@ -88,6 +93,11 @@ function EXCOriginalsPhotos() {
 
   useEffect(() => {
     const carousel = document.querySelector('.carousel')
+    const carouselWidth = carousel.getBoundingClientRect().width
+    carousel.scrollLeft = carouselWidth / 2
+  }, [])
+  useEffect(() => {
+    const carousel = document.querySelector('.carousel')
     const infoSliderAlbums = document.querySelectorAll('.carousel-info-slider h2')
     carousel.addEventListener('scroll', handleScrollAnimation)
     infoSliderAlbums.forEach((albumHead, i) => {
@@ -112,7 +122,7 @@ function EXCOriginalsPhotos() {
           }
         })
       }, 250)
-    }, false);
+    }, false)
   })
 
   return (

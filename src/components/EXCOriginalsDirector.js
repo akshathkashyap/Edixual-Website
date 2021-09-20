@@ -55,7 +55,7 @@ function EXCOriginalsDirector() {
         </div>
       </div>
       <div className="director-about-container">
-        <p>Our director has been the strongest pillar on which EdiXual was built on. It was all possible due to his capacity and range of work he has shaped himself to excel in. When asked how he manages to do all that, he says<br /><br /><strong>“I’m just trying to create a movie called LIFE.”</strong></p>
+        <p>Aniket Sritava has been the strongest pillar on which EdiXual was built on. With his inertly inquisitive mind, he has managed to excel in a wide range of skills. When asked how he manages to do all that, he says<br /><br /><strong>“I’m just trying to create a movie called LIFE.”</strong></p>
       </div>
     </div>
   )

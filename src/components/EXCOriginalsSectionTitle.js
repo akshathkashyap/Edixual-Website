@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import EXCOriginalsSectionCall from './EXCOriginalsSectionCall'
 
 import './EXCOriginalsSectionTitle.css'
@@ -25,6 +25,14 @@ function EXCOriginalsSectionTitle(props) {
       "secTitleInfo": "The EdiXual Creation pipeline has a new exciting project ready for release, watch this space for more updates."
     }
   ]
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  })
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import EXCOriginalsSideNavbar from './EXCOriginalsSideNavbar'
 import EXCOriginalsFooter from './EXCOriginalsFooter'
 import EXCOriginalsPageContent from './EXCOriginalsPageContent'

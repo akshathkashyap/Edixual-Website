@@ -132,6 +132,14 @@
   color: var(--primary-text-color) !important;
 }
 
+.carousel-info-slider h2:first-child {
+  margin-left: 50%;
+}
+
+.carousel-info-slider h2:last-child {
+  margin-right: 50%;
+}
+
 @media only screen and (max-width: 815px) {
   .photos .section-title::before {
     height: 4rem;

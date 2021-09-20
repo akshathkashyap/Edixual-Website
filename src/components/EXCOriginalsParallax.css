@@ -24,6 +24,7 @@
 
 #layer2 {
   z-index: -3;
+  left: -10px;
 }
 
 #layer3 {

@@ -64,6 +64,7 @@ function EXCOriginalsParallax() {
     window.addEventListener('resize', activateMobile)
     return () => {
       window.removeEventListener('resize', activateMobile)
+      window.removeEventListener('scroll', parallaxScrollHandler)
     }
   })
 

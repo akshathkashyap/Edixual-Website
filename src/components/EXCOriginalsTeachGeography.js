@@ -35,7 +35,7 @@ function EXCOriginalsTeachGeography() {
          <img id="light" src={ process.env.PUBLIC_URL + '/images/light.png' } alt="Light" />
         </div>
         <div id="city">
-         <img src="https://www.nicepng.com/png/full/923-9238382_free-png-night-city-silhouette-png-night-city.png" alt="City" />
+         <img src={ process.env.PUBLIC_URL + '/images/city.png' } alt="City" />
         </div>
       </div>
       <div id="locationQR">

@@ -22,18 +22,17 @@ function EXCOriginalsFooter() {
         </div>
         <div className="info">
           <h1>E-MAIL</h1>
-          <p>edixual@gmail.com</p>
+          <p>info@edixual.com</p>
         </div>
         <div className="info">
           <h1>NEWSLETTER</h1>
-          <p>Website is soon to become fully functional.</p>
-          <p>Loop Lapeta behind the scenes now streaming. Checkout our WHAT"S COMING UP! page to learn more.</p>
+          <p>Website is is still in the soft launch phase, so there might be some hiccups...</p>
+          <p>Checkout our COMING UP NEXT! page to to stay updated with our work.</p>
         </div>
         <div className="info">
-          <h1>FEEDBACK</h1>
-          <p>Worked with us before?</p>
-          <p>Give us your valuable feedback.</p>
-          <button onClick={clickHandler}>give my feedback</button>
+          <h1>SERVICES</h1>
+          <p>Want to work with us?</p>
+          <Link to='/EXCOriginals/HowToReachUs'>Yeah!</Link>
         </div>
       </div>
     </footer>

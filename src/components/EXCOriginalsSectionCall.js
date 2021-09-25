@@ -2,6 +2,7 @@ import React from 'react'
 import EXCOriginalsTextVideo from './EXCOriginalsTextVideo'
 import EXCOriginalsPhotos from './EXCOriginalsPhotos'
 import EXCOriginalsVideos from './EXCOriginalsVideos'
+import EXCOriginalsJobAppForm from './EXCOriginalsJobAppForm'
 import EXCOriginalsTeachGeography from './EXCOriginalsTeachGeography'
 import EXCOriginalsBannerHolder from './EXCOriginalsBannerHolder'
 
@@ -27,7 +28,10 @@ function EXCOriginalsSectionCall(props) {
     )
   } else if (title === 'HowToReachUs') {
     return (
+      <>
+      <EXCOriginalsJobAppForm />
       <EXCOriginalsTeachGeography />
+      </>
     )
   } else if (title === 'ComingUpNext') {
     return (

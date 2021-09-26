@@ -40,11 +40,11 @@ function EXCOriginalsPhotos() {
       "albumName": "Food Photography",
       "albumLink": "FoodPhotography",
     },
-    {
-      "albumIndex": "7",
-      "albumName": "Madhusmita Das, Actress",
-      "albumLink": "MadhusmitaDas",
-    },
+//    {
+//      "albumIndex": "7",
+//      "albumName": "Madhusmita Das, Actress",
+//      "albumLink": "MadhusmitaDas",
+//    },
   ]
   const handleScrollAnimation = () => {
     const viewportWidth = window.innerWidth

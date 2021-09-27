@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <div className="flex-container">
       <div className="logo-container">
-        <Link to='/'>
+        <Link to='/EdiXualCreations'>
           <img id="logoFirst" src={ process.env.PUBLIC_URL + '/images/edixualLogo_White.png' } alt="EdiXual Creations" />
         </Link>
       </div>

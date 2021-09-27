@@ -1,5 +1,6 @@
 import LandingPage from './components/LandingPage'
 import EXCOriginals from './components/EXCOriginals'
+import EdiXualCreations from './components/EdiXualCreations'
 import EXCOriginalsPhotoAlbum from './components/EXCOriginalsPhotoAlbum'
 import {
   BrowserRouter as Router,
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={ LandingPage } />
+        <Route exact path='/EdiXualCreations' component={ EdiXualCreations } />
         <Route exact path='/EXCOriginals' component={ EXCOriginals } />
         <Route exact path='/EXCOriginals/WhoAreWe' component={ EXCOriginals } />
         <Route exact path='/EXCOriginals/WhatHaveWeDone' component={ EXCOriginals } />

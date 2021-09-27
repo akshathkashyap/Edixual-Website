@@ -55,14 +55,14 @@ footer {
   color: var(--secondary-text-color);
 }
 
-.info button {
-  cursor: pointer;
+.info a {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  height: 4rem;
-  width: 9rem;
-  padding: auto;
+  text-decoration: none;
+  height: max-content;
+  width: max-content;
+  padding: 0.5rem;
   color: var(--primary-text-color);
   background-color: var(--secondary-text-color);
   border-radius: 0.5rem;
@@ -71,7 +71,7 @@ footer {
   transition: background-color 0.5s;
 }
 
-.info button:hover {
+.info a:hover {
   background-color: var(--background-color);
 }
 
@@ -84,7 +84,7 @@ footer {
     width: 90%;
   }
 
-  .info button {
+  .info a {
     background-color: var(--background-color);
     margin: 0 auto;
   }

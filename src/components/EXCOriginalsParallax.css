@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .parallax {
   position: relative;
   display: flex;
@@ -76,3 +77,83 @@
     background-repeat: no-repeat;
   }
 }
+=======
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 200vh;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+}
+
+#layer0 {
+  z-index: -1;
+  outline: solid var(--background-color) 100vh;
+}
+
+#layer1 {
+  z-index: -2;
+}
+
+#layer2 {
+  z-index: -3;
+  left: -10px;
+}
+
+#layer3 {
+  z-index: -4;
+}
+
+#layer4 {
+  z-index: -5;
+}
+
+#layer5 {
+  z-index: -6;
+  object-position: top;
+}
+
+.parallax a {
+  height: max-content;
+  width: max-content;
+}
+
+.parallax a img {
+  cursor: pointer;
+  height: 200px;
+  width: auto;
+  filter: invert();
+  transition: filter 0.5s;
+}
+
+.parallax #exploreBtn{
+  cursor: pointer;
+  position: absolute;
+  font-size: calc(1rem + 8px);
+  height: auto;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  transform: translateY(-50vh);
+  padding: 0.75rem;
+  background-color: var(--primary-text-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 24px;
+}
+
+@media only screen and (max-width: 815px) {
+  .parallax {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+>>>>>>> 007c24cc64b54c59379ea99b5f4153d877839866

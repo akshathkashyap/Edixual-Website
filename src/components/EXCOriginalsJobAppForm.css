@@ -1,0 +1,117 @@
+.job-app-form .section-title::before {
+  content: "";
+  position: absolute;
+  justify-content: center;
+  background-color: var(--primary-text-color);
+  left: -1rem;
+  height: 6rem;
+  width: 2px;
+}
+
+.job-app-form .mad-libs {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--secondary-text-color);
+}
+
+.mad-libs.hidden {
+  display: none;
+}
+
+.texter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  color: var(--primary-text-color);
+  /* color: #0b9c8b; */
+}
+
+.mad-libs .texter~span {
+  color: var(--accent-color);
+}
+
+.enquiry-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background-color: var(--menu-color);
+}
+
+.enquiry-form input, .enquiry-form textarea {
+  flex-shrink: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  width: 30vw;
+  height: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--hover-color);
+  color: var(--secondary-text-color);
+}
+
+.enquiry-form textarea {
+  height: 4rem;
+  resize: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 3rem;
+  width: 9rem;
+  margin: 1rem calc(30vw - 9rem);
+  padding: auto;
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@media only screen and (max-width: 815px) {
+  .job-app-form .section-title::before {
+    height: 4rem;
+  }
+
+  .job-app-form .mad-libs {
+    font-size: 1rem;
+  }
+
+  .texter {
+    font-size: 1rem;
+  }
+
+  .enquiry-form {
+    padding: 2rem 0;
+  }
+
+  .enquiry-form input, .enquiry-form textarea{
+    width: 70vw;
+  }
+
+  input[type=submit] {
+    height: 3rem;
+    width: 9rem;
+    margin: 1rem calc(30vw - 9rem);
+  }
+}

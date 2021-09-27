@@ -31,6 +31,7 @@
 
   animation: lampsAnimation 2s infinite;
 }
+
 #light {
   position: absolute;
   height: 100%;
@@ -54,7 +55,13 @@
 }
 
 #city img {
-  filter: blur(3px);
+  position: absolute;
+  height: auto;
+  width: 130%;
+  left: -15%;
+  bottom: -30px;
+
+  /* filter: blur(3px); */
 }
 
 #locationQR {

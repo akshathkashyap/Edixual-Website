@@ -46,6 +46,15 @@
   transform: translateX(100%);
 }
 
+.banner-disclaimer {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.5rem;
+  right: 0;
+  bottom: 0;
+  color: var(--primary-text-color);
+}
+
 .banner-btn {
   cursor: pointer;
   position: absolute;

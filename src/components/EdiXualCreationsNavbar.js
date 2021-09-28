@@ -4,11 +4,21 @@ import { Link } from 'react-router-dom'
 
 import './EdiXualCreationsNavbar.css'
 
-function EdiXualCreationsNavbar() {
+function EdiXualCreationsNavbar(props) {
+  var path = props.path.slice(18)
   const [navbar, setNavbar] = useState('desktop')
+  const paths = ['', '', 'services', 'work', 'contact']
 
   const selectNav = () => {
     window.innerWidth <= 815 ? setNavbar('mobile') : setNavbar('desktop')
+  }
+  const fireClickEvent = () => {
+    const index = paths.indexOf(path)
+    document.querySelectorAll('.navbar-li a').forEach((link, i) => {
+      if (i === index) {
+        link.click()
+      }
+    })
   }
   const clickHandler = (event) => {
     const navLinks = document.querySelectorAll('.navbar-li a')
@@ -41,6 +51,9 @@ function EdiXualCreationsNavbar() {
       })
     }
   })
+  useEffect(() => {
+    if (path.length !== 0) {fireClickEvent()}
+  }, [])
 
   return (
     <>
@@ -57,23 +70,23 @@ function EdiXualCreationsNavbar() {
           </Link>
         </li>
         <li className='navbar-li'>
-          <Link to='/EdiXualCreations'>
+          <Link to='/EdiXualCreations/services'>
             SERVICES
           </Link>
         </li>
         <li className='navbar-li'>
-          <Link to='/EdiXualCreations'>
+          <Link to='/EdiXualCreations/work'>
             WORK
           </Link>
         </li>
         <li className='navbar-li'>
-          <Link to='/EdiXualCreations'>
+          <Link to='/EdiXualCreations/contact'>
             CONTACT
           </Link>
         </li>
       </ul>
     </nav>
-    {navbar === 'mobile' ? <EdiXualCreationsMobileNavbar /> : ''}
+    {navbar === 'mobile' ? <EdiXualCreationsMobileNavbar path={props.path} /> : ''}
     </>
   )
 }

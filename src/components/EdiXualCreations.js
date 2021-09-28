@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react'
 import EdiXualCreationsNavbar from './EdiXualCreationsNavbar'
+import EdiXualCreationsPageHeading from './EdiXualCreationsPageHeading'
 
-function EdiXualCreations() {
+function EdiXualCreations(props) {
+
   useEffect(() => {
     document.title = 'EdiXual Creations'
   })
+
   return (
-    <EdiXualCreationsNavbar />
+    <>
+    <EdiXualCreationsNavbar path={props.match.path} />
+    <EdiXualCreationsPageHeading path={props.match.path} />
+    </>
   )
 }
 

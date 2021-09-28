@@ -16,6 +16,9 @@ function App() {
       <Switch>
         <Route exact path='/' component={ LandingPage } />
         <Route exact path='/EdiXualCreations' component={ EdiXualCreations } />
+        <Route exact path='/EdiXualCreations/services' component={ EdiXualCreations } />
+        <Route exact path='/EdiXualCreations/work' component={ EdiXualCreations } />
+        <Route exact path='/EdiXualCreations/contact' component={ EdiXualCreations } />
         <Route exact path='/EXCOriginals' component={ EXCOriginals } />
         <Route exact path='/EXCOriginals/WhoAreWe' component={ EXCOriginals } />
         <Route exact path='/EXCOriginals/WhatHaveWeDone' component={ EXCOriginals } />

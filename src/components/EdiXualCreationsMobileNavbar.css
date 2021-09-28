@@ -10,6 +10,7 @@
   height: 3rem;
   /* background-color: var(--menu-color); */
   backdrop-filter: blur(15px) brightness(137%);
+  z-index: 100;
 }
 
 .mobile-nav a {

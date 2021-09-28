@@ -25,7 +25,7 @@ function EdiXualCreationsNavbar(props) {
     navLinks.forEach((link, i) => {
       if (i >= 2) {
         if (link === event.target) {
-          link.style.transform = 'translateY(calc(50px + 0.5rem))'
+          link.style.transform = 'translateY(calc(50px + 5rem))'
         } else {
           link.style.transform = 'translateY(0)'
         }

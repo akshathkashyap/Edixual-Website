@@ -8,7 +8,9 @@ function EdiXualCreationsPageHeading(props) {
 
   const showTitle = () => {
     const index = paths.indexOf(path)
-    document.querySelectorAll('.page-heading .title').forEach((title, i) => {
+    const pageHeading = document.querySelector('.page-heading')
+    const pageHeadingTitles = document.querySelectorAll('.page-heading .title')
+    pageHeadingTitles.forEach((title, i) => {
       if (i === (index - 2)) {
         title.style.transform = 'translateY(0)'
       } else {

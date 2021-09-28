@@ -8,6 +8,7 @@
   /* background-color: var(--menu-color); */
   backdrop-filter: blur(15px) brightness(137%);
   overflow: hidden;
+  z-index: 100;
 }
 
 .glass-nav ul {

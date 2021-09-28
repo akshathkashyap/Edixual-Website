@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import EdiXualCreationsNavbar from './EdiXualCreationsNavbar'
 import EdiXualCreationsPageHeading from './EdiXualCreationsPageHeading'
+import EdiXualCreationsPageInfo from './EdiXualCreationsPageInfo'
 
 function EdiXualCreations(props) {
+  var path = props.match.path
 
   useEffect(() => {
     document.title = 'EdiXual Creations'
@@ -10,8 +12,9 @@ function EdiXualCreations(props) {
 
   return (
     <>
-    <EdiXualCreationsNavbar path={props.match.path} />
-    <EdiXualCreationsPageHeading path={props.match.path} />
+    <EdiXualCreationsNavbar path={path} />
+    <EdiXualCreationsPageHeading path={path} />
+    <EdiXualCreationsPageInfo path={path} />
     </>
   )
 }

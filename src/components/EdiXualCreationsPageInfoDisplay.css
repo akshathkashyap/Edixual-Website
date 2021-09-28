@@ -1,0 +1,61 @@
+.infocard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap-reverse;
+
+  margin: 30vh 0;
+}
+
+.infocard-text {
+  cursor: default;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+}
+
+.infocard-heading {
+  position: relative;
+  font-size: 2rem;
+  color: var(--danger-color);
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.infocard-heading-info {
+  line-height: 1.6;
+  color: var(--secondary-text-color);
+}
+
+.infocard-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  width: 40%;
+  margin-right: 10%;
+  background-color: var(--menu-color)
+}
+
+.infocard-image img {
+  flex-shrink: 0;
+
+  width: 70%;
+  transform: translateX(30%) translateY(40%);
+}
+
+@media only screen and (max-width: 815px) {
+  .infocard-text {
+    width: 100%;
+  }
+
+  .infocard-heading {
+    transform: translateX(0);
+  }
+
+  .infocard-image {
+    width: 90%;
+  }
+
+  .infocard-image img {
+    transform: translateX(15%) translateY(20%);
+  }
+}

@@ -57,7 +57,7 @@ function EdiXualCreationsNavbar(props) {
 
   return (
     <>
-    <nav>
+    <nav className='glass-nav'>
       <ul>
         <li className='navbar-li logo'>
           <Link to='/EdiXualCreations'>

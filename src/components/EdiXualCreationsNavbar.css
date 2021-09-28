@@ -1,4 +1,4 @@
-nav {
+.glass-nav {
   position: sticky;
   font-family: 'Raleway', sans-serif;
   top: 0;
@@ -10,7 +10,7 @@ nav {
   overflow: hidden;
 }
 
-nav ul {
+.glass-nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -56,12 +56,12 @@
 
 #city img {
   position: absolute;
-  height: auto;
+  height: 20rem;
   width: 130%;
   left: -15%;
-  bottom: -30px;
+  bottom: -5rem;
 
-  /* filter: blur(3px); */
+  filter: blur(2px);
 }
 
 #locationQR {

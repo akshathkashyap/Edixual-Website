@@ -37,7 +37,7 @@
   font-size: 2rem;
   background: none;
   border: none;
-  color: var(--secondary-text-color);
+  color: var(--background-color);
   transition: color 0.5s;
 }
 

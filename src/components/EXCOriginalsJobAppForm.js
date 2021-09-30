@@ -59,22 +59,22 @@ function EXCOriginalsJobAppForm() {
       <p className='mad-libs hidden' id='formRes'><span className='texter'>EXCOriginals: </span><br/>That sounds fun <span>{fName}</span>. We'll get back to you shortly. You shall recieve a mail on <span>{email}</span> or we'll give you a call on <span>{`+91 ${pCon}`}</span>.</p>
       <form className='enquiry-form' method='post' autoComplete='on' name='enquiry-form'>
         <div className='input'>
-          <input type="text" id="fName" name="First Name" placeholder='First Name' maxlength='24' required onInput={fNameInputListener} />
+          <input type="text" id="fName" name="First Name" placeholder='First Name' maxLength='24' required onInput={fNameInputListener} />
         </div>
         <div className='input'>
-          <input type="text" id="lName" name="Last Name" placeholder='Last Name' maxlength='24' required onInput={lNameInputListener} />
+          <input type="text" id="lName" name="Last Name" placeholder='Last Name' maxLength='24' required onInput={lNameInputListener} />
         </div>
         <div className='input'>
-          <input type="text" id="cName" name="Company Name" placeholder='Company Name' maxlength='36' required onInput={cNameInputListener} />
+          <input type="text" id="cName" name="Company Name" placeholder='Company Name' maxLength='36' required onInput={cNameInputListener} />
         </div>
         <div className='input'>
-          <textarea id="workDet" name="Work Detail" placeholder='Work with us on... ( 120 characters )' maxlength='120' required onInput={workDetInputListener}></textarea>
+          <textarea id="workDet" name="Work Detail" placeholder='Work with us on... ( 120 characters )' maxLength='120' required onInput={workDetInputListener}></textarea>
         </div>
         <div className='input'>
-          <input type="email" id="email" name="Email" placeholder='something@email.com' maxlength='36' required />
+          <input type="email" id="email" name="Email" placeholder='something@email.com' maxLength='36' required />
         </div>
         <div className='input'>
-          <input type="number" id="pCon" name="Personal Contact" placeholder='Personal Contact Number' minlength='10' maxlength='10' required onInput={pConInputListener} />
+          <input type="number" id="pCon" name="Personal Contact" placeholder='Personal Contact Number' minLength='10' maxLength='10' required onInput={pConInputListener} />
         </div>
         <div className='input'>
           <input type="submit" value="Submit" />

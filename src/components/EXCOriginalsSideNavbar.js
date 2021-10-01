@@ -9,6 +9,26 @@ function EXCOriginalsSideNavbar(props) {
                 "https://www.facebook.com/pg/edixual/community/?ref=page_internal",
                 "https://twitter.com/Edi_Xual"]
   const [navBarOpen, setNavBarOpen] = useState(false)
+  const scrollHandler = () => {
+    const navbarPointer = document.querySelector('#EXCOriginalsNavbarPointer')
+    if (navbarPointer === null) {
+      return null
+    }
+    var isScrolling
+    window.addEventListener('scroll', function ( event ) {
+      navbarPointer.style.opacity = '0'
+	    window.clearTimeout( isScrolling )
+	    isScrolling = setTimeout(function() {
+        navbarPointer.style.opacity = '1'
+      }, 250)
+    })
+  }
+  const checkNavbarPointer = () => {
+    const navbarPointer = document.querySelector('#EXCOriginalsNavbarPointer')
+    if (navbarPointer !== null) {
+      navbarPointer.remove()
+    }
+  }
   const toggleNav = (open) => {
     var navbar = document.querySelector('.navbar')
     var navBtn = document.querySelector('#navBtn')
@@ -16,6 +36,7 @@ function EXCOriginalsSideNavbar(props) {
       navbar.classList.remove('nav-close')
       navbar.classList.add('nav-open')
       navBtn.innerHTML = '&#9932;'
+      checkNavbarPointer()
     } else {
       navbar.classList.remove('nav-open')
       navbar.classList.add('nav-close')
@@ -40,8 +61,13 @@ function EXCOriginalsSideNavbar(props) {
     toggleNav(navBarOpen)
     disableScroll(navBarOpen)
   })
+  useEffect(() => {
+    scrollHandler()
+  }, [])
 
   return (
+    <>
+    <p id='EXCOriginalsNavbarPointer'>open navbar	&#8594;</p>
     <div className="navbar nav-close">
       <div className="open-nav">
         <button id="navBtn" onClick={() => setNavBarOpen(!navBarOpen)}>&#9776;</button>
@@ -67,6 +93,7 @@ function EXCOriginalsSideNavbar(props) {
         </div>
       </nav>
     </div>
+    </>
   )
 }
 

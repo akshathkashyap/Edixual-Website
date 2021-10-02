@@ -4,13 +4,13 @@ import './EdiXualCreationsPageHeading.css'
 
 function EdiXualCreationsPageHeading(props) {
   const [path, setPath] = useState('')
-  const paths = ['', '', 'services', 'work', 'contact']
+  const paths = ['', 'services', 'work', 'contact']
 
   const showTitle = () => {
     const index = paths.indexOf(path)
     const pageHeadingTitles = document.querySelectorAll('.page-heading .title')
     pageHeadingTitles.forEach((title, i) => {
-      if (i === (index - 2)) {
+      if (i === (index)) {
         title.style.transform = 'translateY(0)'
       } else {
         title.style.transform = 'translateY(calc(-100% - 1.5rem))'
@@ -28,6 +28,7 @@ function EdiXualCreationsPageHeading(props) {
 
   return (
     <div className='page-heading'>
+    <h1 className= 'title'>Editing Visuals & Creating Memories</h1>
       <h1 className= 'title'>Services</h1>
       <h1 className= 'title'>Work</h1>
       <h1 className= 'title'>Contact</h1>

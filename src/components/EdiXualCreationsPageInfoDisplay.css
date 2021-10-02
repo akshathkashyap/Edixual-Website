@@ -40,7 +40,7 @@
 
   width: 40%;
   margin-right: 10%;
-  background-color: var(--menu-color)
+  background-color: var(--menu-color);
 }
 
 .infocard-image img {
@@ -58,7 +58,7 @@
     left: 0;
     height: 0px;
     width: 60vw;
-    outline: dashed var(--danger-color) 2px;
+    outline: dashed var(--danger-color) 1px;
   }
 
   .infocard-text {

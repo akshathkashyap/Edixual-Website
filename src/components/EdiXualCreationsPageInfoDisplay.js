@@ -14,7 +14,13 @@ function EdiXualCreationsPageInfoDisplay(props) {
           <h1>{info.heading}</h1>
         </div>
         <div className='infocard-heading-info'>
-          <p>{info.headingInfo}</p>
+          {
+            info.headingInfo.map((headingInfo, index) => {
+              return (
+                <p key={index} >{headingInfo}</p>
+              )
+            })
+          }
         </div>
       </div>
       <div className='infocard-image'>

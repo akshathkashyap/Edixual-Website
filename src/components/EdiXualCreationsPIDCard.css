@@ -9,6 +9,7 @@
 }
 
 .card {
+  cursor: default;
   position: relative;
   min-width: calc(30vw - 2rem);
   max-width: calc(30rem - 2rem);
@@ -20,6 +21,13 @@
   transition: background-color 0.5s;
 }
 
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: var(--primary-text-color);
+  padding: 0.5rem 0;
+}
+
 .card-image {
   width: 15rem;
   height: 11.25rem;
@@ -29,6 +37,13 @@
 .card-image img {
   width: 15rem;
   height: 11.25rem;
+}
+
+.card-details {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  color: var(--primary-text-color);
+  padding: 1rem 0;
 }
 
 .card-link {
@@ -49,6 +64,38 @@
 
 .card-link button:hover {
   filter: brightness(125%);
+}
+
+.card-container-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  transition: 0.5s;
+}
+
+.card-container-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.card-container-btn span {
+  height: 0.25rem;
+  width: 1rem;
+  background-color: var(--danger-color);
+}
+
+.card-container-btn span:first-child {
+  transform: translate(1px, 0.9rem) rotateZ(30deg);
+  transform-origin: right;
+}
+
+.card-container-btn span:last-child {
+  transform: translate(-1px, 0.9rem) rotateZ(-30deg);
+  transform-origin: left;
 }
 
 @media only screen and (max-width: 815px) {

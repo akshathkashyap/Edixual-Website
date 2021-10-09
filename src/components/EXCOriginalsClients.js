@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import './EXCOriginalsClients.css'
 
@@ -18,12 +18,12 @@ function EXCOriginalsClients() {
                 "https://www.aegonlife.com/",
                 "https://www.timexindia.com/",]
 
+  const clientRef = useRef()
   const clickHandler = (link) => {
     window.open(clientsLinks[link])
   }
   const scrollHandler = () => {
-    var client = document.querySelector('.clients .section-title')
-    var clientTop = client.getBoundingClientRect().top
+    var clientTop = clientRef.current.getBoundingClientRect().top
     var clientsContainer = document.querySelector('.clients-container')
     if (clientTop <= (window.innerHeight / 3)) {
       clientsContainer.style.borderRadius = '10vw'
@@ -61,7 +61,7 @@ function EXCOriginalsClients() {
 
   return (
     <div className="clients section-container">
-      <h1 className="section-title">clients</h1>
+      <h1 ref={clientRef} className="section-title">clients</h1>
       <div className="clients-container">
         <div className="client">
           <img src={ process.env.PUBLIC_URL + '/images/YRF_Logo.jpg' } alt="YRF" />

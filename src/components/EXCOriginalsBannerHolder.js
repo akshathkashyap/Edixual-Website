@@ -93,7 +93,7 @@ function EXCOriginalsBannerHolder() {
         {bannerData.map((banner) => {
           return (
             <div className="banner" key={`banner${banner.index}`}>
-              <img className="banner-img" src={ process.env.PUBLIC_URL + `/images/${banner.bannerSrc}` } alt="Banner Image"/>
+              <img className="banner-img" src={ process.env.PUBLIC_URL + `/images/${banner.bannerSrc}` } alt="Banner"/>
               <p className="banner-des hidden">{banner.des}</p>
               <button className="banner-btn left" onClick={() => nextBanner(false)}>&#x276E;</button>
               <button className="banner-btn top right" onClick={toggleInfo}>i</button>
@@ -107,7 +107,7 @@ function EXCOriginalsBannerHolder() {
         {bannerData.map((banner) => {
           return (
             <div className="banner-card" key={`banner${banner.index}info`}>
-              <img className="banner-dp" src={ process.env.PUBLIC_URL + `/images/${banner.bannerDPSrc}` } alt="Banner Display Picture"/>
+              <img className="banner-dp" src={ process.env.PUBLIC_URL + `/images/${banner.bannerDPSrc}` } alt="Banner Display"/>
               <p className="banner-name">{banner.bannerName}</p>
               <p className="banner-card-des">{banner.des}</p>
             </div>

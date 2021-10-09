@@ -28,7 +28,7 @@ function EdiXualCreationsPageHeading(props) {
 
   return (
     <div className='page-heading'>
-    <h1 className= 'title'>Editing Visuals & Creating Memories</h1>
+      <h1 className= 'title'>Editing Visuals & Creating Memories</h1>
       <h1 className= 'title'>Services</h1>
       <h1 className= 'title'>Work</h1>
       <h1 className= 'title'>Contact</h1>

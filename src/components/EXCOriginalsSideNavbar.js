@@ -67,10 +67,10 @@ function EXCOriginalsSideNavbar(props) {
 
   return (
     <>
-    <p id='EXCOriginalsNavbarPointer'>open navbar	&#8594;</p>
     <div className="navbar nav-close">
       <div className="open-nav">
         <button id="navBtn" onClick={() => setNavBarOpen(!navBarOpen)}>&#9776;</button>
+        <p id='EXCOriginalsNavbarPointer'>open navbar	&#8594;</p>
       </div>
       <nav>
         <Link to='/EXCOriginals/WhoAreWe' onClick= {() => navBrandLinksHandler()}>

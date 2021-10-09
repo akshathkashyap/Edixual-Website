@@ -6,16 +6,19 @@
   background-color: var(--menu-color);
   margin-top: 4rem;
   width: 100%;
+  overflow: hidden;
+
+  transition: max-height 1s ease;
 }
 
 .card {
   cursor: default;
   position: relative;
-  min-width: calc(30vw - 2rem);
-  max-width: calc(30rem - 2rem);
+  min-width: calc(30vw - 4rem);
+  max-width: calc(30rem - 4rem);
   height: auto;
   margin: 2rem;
-  padding: 2rem;
+  padding: 0 2rem;
   border-left: dashed var(--danger-color) 2px;
 
   transition: background-color 0.5s;
@@ -23,9 +26,8 @@
 
 .card-title {
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
   color: var(--primary-text-color);
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .card-image {
@@ -41,9 +43,11 @@
 
 .card-details {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.8rem;
-  color: var(--primary-text-color);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--secondary-text-color);
   padding: 1rem 0;
+  width: calc(30vw - 4rem);
 }
 
 .card-link {
@@ -54,7 +58,7 @@
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-text-color);
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: var(--danger-color);
   border: none;
   border-radius: 5px;
@@ -68,9 +72,12 @@
 
 .card-container-btn {
   cursor: pointer;
+  position: sticky;
   display: flex;
   justify-content: center;
 
+  bottom: 0;
+  left: 0;
   height: 1.5rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -98,6 +105,33 @@
   transform-origin: left;
 }
 
+.card-container-btn.expand span:first-child {
+  background-color: var(--primary-text-color);
+  transform: translate(0.5rem, 1.2rem) rotateZ(90deg);
+}
+
+.card-container-btn.expand span:last-child {
+  background-color: var(--primary-text-color);
+  transform: translate(0, 0.7rem) rotateZ(0); 
+}
+
+.card-container-btn button {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: var(--secondary-text-color);
+  background-color: var(--hover-color);
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: 5px;
+  transform: none;
+  transition: color 0.5s;
+}
+
+.card-container-btn button:hover {
+  color: var(--primary-text-color);
+}
+
 @media only screen and (max-width: 815px) {
   .card-image {
     width: 100%;
@@ -107,5 +141,9 @@
   .card-image img {
     width: 100%;
     height: auto;
+  }
+
+  .card-details {
+    width: 100%;
   }
 }

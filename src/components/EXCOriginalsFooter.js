@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './EXCOriginalsFooter.css'
 
 function EXCOriginalsFooter() {
-  const clickHandler = () => {
-    window.open("https://docs.google.com/forms/d/1LS1xK-xFW83euMCg0f2YqMPj-i54Jvj1-_czP595now/edit")
-  }
 
   return (
     <footer>

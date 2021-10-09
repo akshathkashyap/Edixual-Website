@@ -32,8 +32,6 @@ function EXCOriginalsParallax() {
     requestAnimationFrame(animation)
   }
   const parallaxScrollHandler = () => {
-    const parallax = document.querySelector('.parallax')
-    const parallaxHeight = parallax.getBoundingClientRect().height
     const parallaxLayers = document.querySelectorAll('.parallax-layer')
     const pixelsScrolled = window.pageYOffset
     const perspective = 0.12

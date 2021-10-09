@@ -5,7 +5,6 @@ import './EXCOriginalsJobAppForm.css'
 function EXCOriginalsJobAppForm() {
   const [fName, setFName] = useState('First Name')
   const [lName, setLName] = useState('Last Name')
-  const [cName, setCName] = useState('Company Name')
   const [workDet, setWorkDet] = useState("work with me on something")
   const [email, setEmail] = useState('E-Mail')
   const [pCon, setPCon] = useState('Personal Contact')
@@ -16,10 +15,6 @@ function EXCOriginalsJobAppForm() {
   const lNameInputListener = () => {
     var lNameInput = document.querySelector('#lName')
     lNameInput.value === '' ? setLName('Last Name') : setLName(`${lNameInput.value}`)
-  }
-  const cNameInputListener = () => {
-    var cNameInput = document.querySelector('#cName')
-    cNameInput.value === '' ? setCName('Company Name') : setCName(`${cNameInput.value}`)
   }
   const workDetInputListener = () => {
     var workDetInput = document.querySelector('#workDet')
@@ -65,7 +60,7 @@ function EXCOriginalsJobAppForm() {
           <input type="text" id="lName" name="Last Name" placeholder='Last Name' maxLength='24' required onInput={lNameInputListener} />
         </div>
         <div className='input'>
-          <input type="text" id="cName" name="Company Name" placeholder='Company Name' maxLength='36' required onInput={cNameInputListener} />
+          <input type="text" id="cName" name="Company Name" placeholder='Company Name' maxLength='36' required />
         </div>
         <div className='input'>
           <textarea id="workDet" name="Work Detail" placeholder='Work with us on... ( 120 characters )' maxLength='120' required onInput={workDetInputListener}></textarea>

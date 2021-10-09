@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
 import './EXCOriginalsSideNavbar.css'
@@ -9,37 +9,34 @@ function EXCOriginalsSideNavbar(props) {
                 "https://www.facebook.com/pg/edixual/community/?ref=page_internal",
                 "https://twitter.com/Edi_Xual"]
   const [navBarOpen, setNavBarOpen] = useState(false)
-  const scrollHandler = () => {
-    const navbarPointer = document.querySelector('#EXCOriginalsNavbarPointer')
-    if (navbarPointer === null) {
-      return null
+  const navbarRef = useRef()
+  const resizeHandler = () => {
+    if (815 <= window.innerWidth) {
+      scrollHandler()
     }
+  }
+  const scrollHandler = () => {
     var isScrolling
     window.addEventListener('scroll', function ( event ) {
-      navbarPointer.style.opacity = '0'
+      navbarRef.current.classList.remove('nav-peek')
+      navbarRef.current.classList.add('nav-close')
 	    window.clearTimeout( isScrolling )
 	    isScrolling = setTimeout(function() {
-        navbarPointer.style.opacity = '1'
+        navbarRef.current.classList.remove('nav-close')
+        navbarRef.current.classList.add('nav-peek')
       }, 250)
     })
-  }
-  const checkNavbarPointer = () => {
-    const navbarPointer = document.querySelector('#EXCOriginalsNavbarPointer')
-    if (navbarPointer !== null) {
-      navbarPointer.remove()
-    }
   }
   const toggleNav = (open) => {
     var navbar = document.querySelector('.navbar')
     var navBtn = document.querySelector('#navBtn')
     if (open) {
-      navbar.classList.remove('nav-close')
+      navbar.classList.remove('nav-peek')
       navbar.classList.add('nav-open')
       navBtn.innerHTML = '&#9932;'
-      checkNavbarPointer()
     } else {
       navbar.classList.remove('nav-open')
-      navbar.classList.add('nav-close')
+      navbar.classList.add('nav-peek')
       navBtn.innerHTML = '&#9776;'
     }
   }
@@ -64,13 +61,18 @@ function EXCOriginalsSideNavbar(props) {
   useEffect(() => {
     scrollHandler()
   }, [])
+  useEffect(() => {
+    window.addEventListener('resize', resizeHandler)
+    return () => {
+      window.removeEventListener('resize', resizeHandler)
+    }
+  })
 
   return (
     <>
-    <div className="navbar nav-close">
+    <div ref={navbarRef} className="navbar nav-close">
       <div className="open-nav">
         <button id="navBtn" onClick={() => setNavBarOpen(!navBarOpen)}>&#9776;</button>
-        <p id='EXCOriginalsNavbarPointer'>open navbar	&#8594;</p>
       </div>
       <nav>
         <Link to='/EXCOriginals/WhoAreWe' onClick= {() => navBrandLinksHandler()}>

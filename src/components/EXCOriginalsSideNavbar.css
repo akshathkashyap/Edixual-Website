@@ -16,8 +16,13 @@
   left: 0;
 }
 
+.nav-peek {
+  left: 97%;    
+}
+
 .nav-close {
-  left: 97%;
+  /* left: 97%; */
+  left: 100%;
 }
 
 .open-nav {

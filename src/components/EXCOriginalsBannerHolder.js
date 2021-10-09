@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 import './EXCOriginalsBannerHolder.css'
 
@@ -29,22 +29,22 @@ function EXCOriginalsBannerHolder() {
     "des": "Year-End Mashup by Sush & Yohan is a grand project made every year! Year-End Mashup 2020 received 1.3 million views 60k+ likes to date. EXC Originals in collaboration with various visual editors come together to bring the project to life.",
     },
   ]
+  const bannerContRef = useRef()
   const nextBanner = (scroll) => {
-    const bannerCont = document.querySelector('.banner-container')
-    const bannerContWidth = bannerCont.getBoundingClientRect().width
-    const bannerContScroll = bannerCont.scrollLeft
+    const bannerContWidth = bannerContRef.current.getBoundingClientRect().width
+    const bannerContScroll = bannerContRef.current.scrollLeft
     const totalBanners = bannerData.length
     if (scroll) {
       if (bannerContScroll / bannerContWidth <= (totalBanners - 2)) {
-        bannerCont.scrollLeft = bannerContScroll + bannerContWidth
+        bannerContRef.current.scrollLeft = bannerContScroll + bannerContWidth
       } else {
-        bannerCont.scrollLeft = 0
+        bannerContRef.current.scrollLeft = 0
       }
     } else {
       if (bannerContScroll !== 0) {
-        bannerCont.scrollLeft = bannerContScroll - bannerContWidth
+        bannerContRef.current.scrollLeft = bannerContScroll - bannerContWidth
       } else {
-        bannerCont.scrollLeft = bannerContWidth * (totalBanners - 1)
+        bannerContRef.current.scrollLeft = bannerContWidth * (totalBanners - 1)
       }
     }
   }
@@ -72,11 +72,10 @@ function EXCOriginalsBannerHolder() {
   }
 
   useEffect(() => {
-    const bannerCont = document.querySelector('.banner-container')
-    bannerCont.addEventListener('mouseenter', () => {
+    bannerContRef.current.addEventListener('mouseenter', () => {
       window.clearTimeout( timer )
     })
-    bannerCont.addEventListener('mouseleave', () => {
+    bannerContRef.current.addEventListener('mouseleave', () => {
       timer = setTimeout(carouselAutoScroll, 4000)
     })
     var timer
@@ -89,7 +88,7 @@ function EXCOriginalsBannerHolder() {
 
   return (
     <div className="section-container">
-      <div className="banner-container">
+      <div ref={bannerContRef} className="banner-container">
         {bannerData.map((banner) => {
           return (
             <div className="banner" key={`banner${banner.index}`}>

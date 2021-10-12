@@ -41,13 +41,13 @@ function EdiXualCreationsPageInfo(props) {
       "heading": "Editing",
       "headingInfo": ["Many people use the term editing to describe all their post-production work, especially in non-professional situations.", "Video editing is the process of manipulating and rearranging video shots to create a new work. Editing is usually considered to be one part of the post production process — other post-production tasks include titling, colour correction, sound mixing, etc.", "Photo editing is the act of altering an image. But that’s oversimplifying a subject that can be complex and employs different methods and tools. Some photo editing is even done offline, on actual photographs, posters or other printed collateral."],
       "headingImg": "editing_title",
-      "illustrationCall": false,
+      "illustrationCall": true,
     },
     {
       "heading": "GIFs",
       "headingInfo": ["We say “animated images” because GIFs aren’t really videos. If anything, they’re more like flipbooks. For one, they don’t have sound (you probably noticed that). Also, the GIF format wasn’t created for animations; that’s just how things worked out. See, GIF files can hold multiple pictures at once, and people realized that these pictures could load sequentially (again, like a flipbook) if they’re decoded a certain way."],
       "headingImg": "gifs_title",
-      "illustrationCall": false,
+      "illustrationCall": true,
     },
   ]
 

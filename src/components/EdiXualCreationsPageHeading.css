@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 13rem;
+  /* height: 13rem; */
+  height: 15rem;
   overflow: hidden;
 }
 
@@ -11,11 +12,14 @@
   position: absolute;
   top: 0.5rem;
   font-family: 'Raleway', sans-serif;
-  font-size: 5rem;
-  font-weight: 100;
+  font-size: 6rem;
+  font-weight: 900;
   margin: 0 10%;
-  color: var(--primary-text-color);
-  transform: translateY(calc(-100% - 2.5rem));
+  color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-clip: text;
+  transform: translateY(calc(-100% - 3rem));
 
   transition: transform 0.5s;
 }

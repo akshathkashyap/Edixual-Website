@@ -23,6 +23,12 @@ function EdiXualCreationsPageHeading(props) {
   }
 
   useEffect(() => {
+    const titles = document.querySelectorAll('.title')
+    titles.forEach((title, i) => {
+      title.style.backgroundImage = `url('${process.env.PUBLIC_URL}/images/textBackground${i}.jpg')`
+    })
+  }, [])
+  useEffect(() => {
     changePath()
   })
 

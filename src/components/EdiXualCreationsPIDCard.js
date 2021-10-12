@@ -35,6 +35,73 @@ function EdiXualCreationsPIDCard(props) {
       "imgName": "aboutUs_title",
     },
   ]
+  const editingData = [
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 1.",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 2",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 3",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 4",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 5",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Editing project",
+      "details": "I was a project done for company 7",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+  ]
+  const gifData = [
+    {
+      "title": "GIF",
+      "details": "I was a project done for company 1.",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "Good GIF",
+      "details": "I was a project done for company 2",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+    {
+      "title": "GIF about something",
+      "details": "I was a project done for company 3",
+      "link": "View Project",
+      "linkTo": "https://www.edixual.com/",
+      "imgName": "aboutUs_title",
+    },
+  ]
   const [expand, setExpand] = useState(false)
   const cardsContainerRef = useRef()
   const cardContainerHeightRef = useRef({height: 0})
@@ -82,6 +149,50 @@ function EdiXualCreationsPIDCard(props) {
                 <div className='card-details'>{gdi.details}</div>
                 <div className='card-link'>
                   <button onClick={() => linkHandler(gdi.linkTo)}>{gdi.link}</button>
+                </div>
+              </div>
+            )
+          })
+        }
+        <div ref={expandBtnRef} className='card-container-btn'><span></span><span></span></div>
+      </div>
+    )
+  } else if (headingIndex === 2) {
+    return (
+      <div ref={cardsContainerRef} className="pid-card-container">
+        {
+          editingData.map((editing, index) => {
+            return (
+              <div ref={index === 0 ? cardRef : null} key={`${editing.title}${index}`} className='card'>
+                <div className='card-title'>{editing.title}</div>
+                <div className='card-image'>
+                  <img src={ process.env.PUBLIC_URL + `/images/${editing.imgName}.jpg` } alt="Card Image" />
+                </div>
+                <div className='card-details'>{editing.details}</div>
+                <div className='card-link'>
+                  <button onClick={() => linkHandler(editing.linkTo)}>{editing.link}</button>
+                </div>
+              </div>
+            )
+          })
+        }
+        <div ref={expandBtnRef} className='card-container-btn'><span></span><span></span></div>
+      </div>
+    )
+  } else if (headingIndex === 3) {
+    return (
+      <div ref={cardsContainerRef} className="pid-card-container">
+        {
+          gifData.map((gif, index) => {
+            return (
+              <div ref={index === 0 ? cardRef : null} key={`${gif.title}${index}`} className='card'>
+                <div className='card-title'>{gif.title}</div>
+                <div className='card-image'>
+                  <img src={ process.env.PUBLIC_URL + `/images/${gif.imgName}.jpg` } alt="Card Image" />
+                </div>
+                <div className='card-details'>{gif.details}</div>
+                <div className='card-link'>
+                  <button onClick={() => linkHandler(gif.linkTo)}>{gif.link}</button>
                 </div>
               </div>
             )

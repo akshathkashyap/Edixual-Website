@@ -1,0 +1,16 @@
+.slide-info {
+  display: flex;
+  flex-shrink: 0;
+
+  height: 100%;
+  width: 90%;
+  margin: auto 5% auto 5%;
+  background-color: var(--menu-color);
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: center;
+  overflow-y: auto;
+}
+
+.slide-info div {
+  flex-shrink: 0;
+}

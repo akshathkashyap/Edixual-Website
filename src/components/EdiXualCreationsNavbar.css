@@ -5,7 +5,6 @@
   left: 0;
   width: 90%;
   padding: 0 5%;
-  /* background-color: var(--menu-color); */
   backdrop-filter: blur(15px) brightness(137%);
   overflow: hidden;
   z-index: 100;

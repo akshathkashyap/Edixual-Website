@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import EdiXualCreationsPageInfoDisplay from './EdiXualCreationsPageInfoDisplay'
+import EdiXualCreationsWorkWindow from './EdiXualCreationsWorkWindow'
 
 import './EdiXualCreationsPageInfo.css'
 
@@ -51,6 +52,22 @@ function EdiXualCreationsPageInfo(props) {
     },
   ]
 
+  const clickHandler = (index) => {
+    let underline = document.querySelector('.work-slider-titles .underline')
+    let slider = document.querySelector('.work-slider-slide')
+    underline.style.transform = `translateX(calc(100% * ${index}))`
+    slider.scrollLeft = window.innerWidth * index
+  }
+  const scrollHandler = () => {
+    let slider = document.querySelector('.work-slider-slide')
+    let stops = [0, window.innerWidth, window.innerWidth * 2]
+    stops.forEach((stop, i) => {
+      if (Math.floor(slider.scrollLeft) === stop) {
+        clickHandler(i)
+      }
+    })
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0)
   })
@@ -74,8 +91,17 @@ function EdiXualCreationsPageInfo(props) {
     )
   } else if (paths.indexOf(path) === 2) {
     return (
-      <div>
-        I'm div number three
+      <div className='work-slider'>
+        <div className='work-slider-titles'>
+          <h1 onClick={() => clickHandler(0)}>Graphic designing, Illustrations<span className='underline'></span></h1>
+          <h1 onClick={() => clickHandler(1)}>Editing</h1>
+          <h1 onClick={() => clickHandler(2)}>GIFs</h1>
+        </div>
+        <div onScroll={() => scrollHandler()} className='work-slider-slide'>
+          <EdiXualCreationsWorkWindow slide={0} />
+          <EdiXualCreationsWorkWindow slide={1} />
+          <EdiXualCreationsWorkWindow slide={2} />
+        </div>
       </div>
     )
   } else if (paths.indexOf(path) === 3) {

@@ -9,6 +9,7 @@
 }
 
 .page-heading .title {
+  cursor: default;
   position: absolute;
   top: 0.5rem;
   font-family: 'Raleway', sans-serif;

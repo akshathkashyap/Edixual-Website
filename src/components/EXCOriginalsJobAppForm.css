@@ -87,6 +87,44 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.spin-loader {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+  border: solid var(--hover-color) 2px;
+  border-radius: 50%;
+}
+
+.spin-loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top: solid transparent 2px;
+  border-left: solid var(--accent-color) 2px;
+  border-radius: 50%;
+
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes spin {
+  from {
+    transform: scale(1.025) rotateZ(0);
+  }
+  to {
+    transform: scale(1.025) rotateZ(360deg);
+  }
+}
+
 
 @media only screen and (max-width: 815px) {
   .job-app-form .section-title::before {

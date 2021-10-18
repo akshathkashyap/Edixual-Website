@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 
 import './EXCOriginalsJobAppForm.css'
 
@@ -8,6 +8,7 @@ function EXCOriginalsJobAppForm() {
   const [workDet, setWorkDet] = useState("work with me on something")
   const [email, setEmail] = useState('E-Mail')
   const [pCon, setPCon] = useState('Personal Contact')
+  const spinLoaderRef = useRef()
   const fNameInputListener = () => {
     var fNameInput = document.querySelector('#fName')
     fNameInput.value === '' ? setFName('First Name') : setFName(`${fNameInput.value}`)
@@ -27,6 +28,8 @@ function EXCOriginalsJobAppForm() {
   const submitListener = (event) => {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzs6YwxPNjC3ROQlUWj-qp4z7UQp8cB-7lVhRQFSrSpTVlp7KW9BecGPwpMUe0aa2OL-w/exec'
     const form = document.forms['enquiry-form']
+    form.style.display = 'none'
+    spinLoaderRef.current.style.display = 'block'
     event.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(submitSuccessful)
@@ -34,6 +37,7 @@ function EXCOriginalsJobAppForm() {
   }
   const submitSuccessful = () => {
     const successText = document.querySelector('#formRes')
+    spinLoaderRef.current.style.display = 'none'
     successText.classList.remove('hidden')
     setEmail(document.querySelector('#email').value)
   }
@@ -75,6 +79,7 @@ function EXCOriginalsJobAppForm() {
           <input type="submit" value="Submit" />
         </div>
       </form>
+      <div ref={spinLoaderRef} className='spin-loader'></div>
     </div>
   )
 }

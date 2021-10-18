@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import EdiXualCreationsPageInfoDisplay from './EdiXualCreationsPageInfoDisplay'
 import EdiXualCreationsWorkWindow from './EdiXualCreationsWorkWindow'
+import EdiXualCreationsContact from './EdiXualCreationsContact'
 
 import './EdiXualCreationsPageInfo.css'
 
@@ -106,8 +107,8 @@ function EdiXualCreationsPageInfo(props) {
     )
   } else if (paths.indexOf(path) === 3) {
     return (
-      <div>
-        I'm div number four
+      <div className='pageInfo-container'>
+        <EdiXualCreationsContact />
       </div>
     )
   }

@@ -61,7 +61,7 @@
   resize: none;
 }
 
-input[type=submit] {
+.enquiry-form input[type=submit] {
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
@@ -87,7 +87,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.spin-loader {
+.job-app-form .spin-loader {
   display: none;
   position: relative;
   box-sizing: border-box;
@@ -98,7 +98,7 @@ input[type=number] {
   border-radius: 50%;
 }
 
-.spin-loader::after {
+.job-app-form .spin-loader::after {
   content: '';
   box-sizing: border-box;
   position: absolute;

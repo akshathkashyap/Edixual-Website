@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import './EdiXualCreationsPageHeading.css'
 
 function EdiXualCreationsPageHeading(props) {
   const [path, setPath] = useState('')
+  const pageHeadingRef = useRef()
   const paths = ['', 'services', 'work', 'contact']
 
   const showTitle = () => {
@@ -12,6 +13,7 @@ function EdiXualCreationsPageHeading(props) {
     pageHeadingTitles.forEach((title, i) => {
       if (i === (index)) {
         title.style.transform = 'translateY(0)'
+        pageHeadingRef.current.style.height = `calc(${title.getBoundingClientRect().height}px + 1rem)`
       } else {
         title.style.transform = 'translateY(calc(-100% - 1.5rem))'
       }
@@ -33,7 +35,7 @@ function EdiXualCreationsPageHeading(props) {
   })
 
   return (
-    <div className='page-heading'>
+    <div ref={pageHeadingRef} className='page-heading'>
       <h1 className= 'title'>Editing Visuals & Creating Memories</h1>
       <h1 className= 'title'>Services</h1>
       <h1 className= 'title'>Work</h1>

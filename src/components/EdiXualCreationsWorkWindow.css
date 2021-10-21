@@ -1,6 +1,7 @@
 .slide-info {
   display: flex;
   flex-shrink: 0;
+  flex-wrap: wrap;
 
   height: 100%;
   width: 90%;
@@ -11,6 +12,103 @@
   overflow-y: auto;
 }
 
-.slide-info div {
+.slide-info::-webkit-scrollbar {
+  width: 2px;
+}
+
+.slide-info::-webkit-scrollbar-track {
+  background: var(--hover-color);
+}
+
+.slide-info::-webkit-scrollbar-thumb {
+  background: var(--danger-color);
+}
+
+@supports (scrollbar-color: red blue;) {
+  .slide-info {
+    scrollbar-color: var(--danger-color) var(--hover-color);
+    scrollbar-width: thin;
+  }
+}
+
+.slide-info .slide-project {
+  cursor: default;
+  position: relative;
   flex-shrink: 0;
+
+  width: 90%;
+  margin: 2rem 5%;
+}
+
+.project-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+  width: 50%;
+  text-align: center;
+}
+
+.project-layout {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.project-layout img {
+  flex-shrink: 0;
+
+  width: 30%;
+  height: auto;
+  margin: auto;
+}
+
+.project-details {
+  flex-shrink: 0;
+
+  width: 50%;
+}
+
+.project-details p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  max-width: 24rem;
+}
+
+.project-details button {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-text-color);
+  padding: 0.5rem;
+  background-color: var(--danger-color);
+  border: none;
+  border-radius: 5px;
+
+  transition: 0.25s;
+}
+
+.project-details button:hover {
+  filter: brightness(125%);
+}
+
+@media only screen and (max-width: 815px) {
+  .slide-info .slide-project {
+    width: 100%;
+    margin:  2rem 0;
+  }
+
+  .project-title {
+    width: 100%;
+  }
+
+  .project-layout img {
+    width: 100%;
+  }
+
+  .project-details {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
 }

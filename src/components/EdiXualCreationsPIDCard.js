@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect} from 'react'
 import './EdiXualCreationsPIDCard.css'
 
 function EdiXualCreationsPIDCard(props) {
-  const headings = ["List of our Clients", "Graphic designing, Illustrations", "Editing", "GIFs"]
+  const headings = ["Graphic designing, Illustrations", "Editing", "GIFs"]
   const headingIndex = headings.indexOf(props.heading)
   const gdiData = [
     {
@@ -135,7 +135,7 @@ function EdiXualCreationsPIDCard(props) {
     expandBtnRef.current.addEventListener('click', clickHandler)
   }, [])
 
-  if (headingIndex === 1) {
+  if (headingIndex === 0) {
     return (
       <div ref={cardsContainerRef} className="pid-card-container">
         {
@@ -157,7 +157,7 @@ function EdiXualCreationsPIDCard(props) {
         <div ref={expandBtnRef} className='card-container-btn'><span></span><span></span></div>
       </div>
     )
-  } else if (headingIndex === 2) {
+  } else if (headingIndex === 1) {
     return (
       <div ref={cardsContainerRef} className="pid-card-container">
         {
@@ -179,7 +179,7 @@ function EdiXualCreationsPIDCard(props) {
         <div ref={expandBtnRef} className='card-container-btn'><span></span><span></span></div>
       </div>
     )
-  } else if (headingIndex === 3) {
+  } else if (headingIndex === 2) {
     return (
       <div ref={cardsContainerRef} className="pid-card-container">
         {

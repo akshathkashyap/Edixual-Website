@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import EdiXualCreationsPageInfoDisplay from './EdiXualCreationsPageInfoDisplay'
+import EdiXualCreationsPIDClients from './EdiXualCreationsPIDClients'
 import EdiXualCreationsWorkWindow from './EdiXualCreationsWorkWindow'
 import EdiXualCreationsContact from './EdiXualCreationsContact'
 
@@ -79,6 +80,7 @@ function EdiXualCreationsPageInfo(props) {
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[0]}/>
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[1]}/>
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[2]}/>
+        <EdiXualCreationsPIDClients />
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[3]}/>
       </div>
     )

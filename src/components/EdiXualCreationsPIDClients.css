@@ -1,0 +1,44 @@
+.clients-carousel {
+  position: relative;
+  display: flex;
+
+  box-sizing: border-box;
+  height: 300px;
+  width: 100%;
+  margin: 4rem 0;
+  padding: 3rem 1rem;
+  overflow-x: scroll;
+
+  background-color: var(--menu-color);
+}
+
+.clients-carousel::-webkit-scrollbar {
+  height: 2px;
+}
+
+.clients-carousel::-webkit-scrollbar-track {
+  background: var(--hover-color);
+}
+
+.clients-carousel::-webkit-scrollbar-thumb {
+  background: var(--danger-color);
+}
+
+@supports (scrollbar-color: red blue;) {
+  .clients-carousel {
+    scrollbar-color: var(--danger-color) var(--hover-color);
+    scrollbar-width: thin;
+  }
+}
+
+.client-card {
+  height: 100%;
+  width: auto;
+  margin: 0 3rem;
+}
+
+.client-card img {
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+}

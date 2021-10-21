@@ -26,7 +26,7 @@
   cursor: pointer;
   text-align: center;
   color: var(--secondary-text-color);
-  border-bottom: solid var(--menu-color) 2px;
+  border-bottom: solid var(--hover-color) 2px;
 }
 
 .work-slider-titles .underline {

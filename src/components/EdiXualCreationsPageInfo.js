@@ -3,6 +3,7 @@ import EdiXualCreationsPageInfoDisplay from './EdiXualCreationsPageInfoDisplay'
 import EdiXualCreationsPIDClients from './EdiXualCreationsPIDClients'
 import EdiXualCreationsWorkWindow from './EdiXualCreationsWorkWindow'
 import EdiXualCreationsContact from './EdiXualCreationsContact'
+import EdiXualCreationsFooter from './EdiXualCreationsFooter'
 
 import './EdiXualCreationsPageInfo.css'
 
@@ -82,6 +83,7 @@ function EdiXualCreationsPageInfo(props) {
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[2]}/>
         <EdiXualCreationsPIDClients />
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[3]}/>
+        <EdiXualCreationsFooter />
       </div>
     )
   } else if (paths.indexOf(path) === 1) {
@@ -90,6 +92,7 @@ function EdiXualCreationsPageInfo(props) {
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[4]}/>
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[5]}/>
         <EdiXualCreationsPageInfoDisplay info={infoCardDetails[6]}/>
+        <EdiXualCreationsFooter />
       </div>
     )
   } else if (paths.indexOf(path) === 2) {
@@ -111,6 +114,7 @@ function EdiXualCreationsPageInfo(props) {
     return (
       <div className='pageInfo-container'>
         <EdiXualCreationsContact />
+        <EdiXualCreationsFooter />
       </div>
     )
   }

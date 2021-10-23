@@ -6,7 +6,7 @@ import './EXCOriginalsFooter.css'
 function EXCOriginalsFooter() {
 
   return (
-    <footer>
+    <footer className="exco-footer">
       <div className="footer-logo">
         <Link to='/EXCOriginals'>
           <img src={ process.env.PUBLIC_URL + '/images/excoLogo_White.png' } alt="EXC Originals" />

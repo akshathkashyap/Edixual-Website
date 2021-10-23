@@ -7,10 +7,6 @@
   margin: 30vh 0 0 0;
 }
 
-.infocard:last-child {
-  margin: 30vh 0 30vh 0;
-}
-
 .infocard-text {
   cursor: default;
   font-family: 'Montserrat', sans-serif;

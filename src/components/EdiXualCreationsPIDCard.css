@@ -72,12 +72,10 @@
 
 .card-container-btn {
   cursor: pointer;
-  position: sticky;
+  position: relative;
   display: flex;
   justify-content: center;
 
-  bottom: 0;
-  left: 0;
   height: 1.5rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -89,47 +87,34 @@
   background-color: var(--hover-color);
 }
 
-.card-container-btn span {
-  height: 0.25rem;
-  width: 1rem;
+.card-container-btn .dot-dot-dot {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-container-btn .dot-dot-dot span {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: auto 2px;
   background-color: var(--danger-color);
+  border-radius: 50%;
 }
 
-.card-container-btn span:first-child {
-  transform: translate(1px, 0.9rem) rotateZ(30deg);
-  transform-origin: right;
-}
-
-.card-container-btn span:last-child {
-  transform: translate(-1px, 0.9rem) rotateZ(-30deg);
-  transform-origin: left;
-}
-
-.card-container-btn.expand span:first-child {
-  background-color: var(--primary-text-color);
-  transform: translate(0.5rem, 1.2rem) rotateZ(90deg);
-}
-
-.card-container-btn.expand span:last-child {
-  background-color: var(--primary-text-color);
-  transform: translate(0, 0.7rem) rotateZ(0);
-}
-
-.card-container-btn button {
-  cursor: pointer;
+.card-container-btn .dot-dot-dot .btn-tooltip {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
-  color: var(--secondary-text-color);
-  background-color: var(--hover-color);
-  padding: 0 0.5rem;
-  border: none;
-  border-radius: 5px;
-  transform: none;
-  transition: color 0.5s;
+  font-size: 0.9rem;
+  top: -1.7rem;
+  padding: 0.3rem;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+  visibility: hidden;
 }
 
-.card-container-btn button:hover {
-  color: var(--primary-text-color);
+.card-container-btn .dot-dot-dot:hover .btn-tooltip
+{
+  visibility: visible;
 }
 
 @media only screen and (max-width: 815px) {

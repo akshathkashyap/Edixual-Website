@@ -75,4 +75,8 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .parallax #home {
+    left: 0;
+  }
 }

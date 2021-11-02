@@ -10,13 +10,9 @@ function EXCOriginalsSideNavbar(props) {
                 "https://twitter.com/Edi_Xual"]
   const [navBarOpen, setNavBarOpen] = useState(false)
   const navbarRef = useRef()
-  const resizeHandler = () => {
-    if (815 <= window.innerWidth) {
-      scrollHandler()
-    }
-  }
   const scrollHandler = () => {
-    var isScrolling
+    if (window.innerWidth <= 815) return
+    let isScrolling
     window.addEventListener('scroll', function ( event ) {
       navbarRef.current.classList.remove('nav-peek')
       navbarRef.current.classList.add('nav-close')
@@ -32,11 +28,12 @@ function EXCOriginalsSideNavbar(props) {
     var navBtn = document.querySelector('#navBtn')
     if (open) {
       navbar.classList.remove('nav-peek')
+      navbar.classList.remove('nav-close')
       navbar.classList.add('nav-open')
       navBtn.innerHTML = '&#9932;'
     } else {
       navbar.classList.remove('nav-open')
-      navbar.classList.add('nav-peek')
+      window.innerWidth <= 815 ? navbar.classList.add('nav-close') : navbar.classList.add('nav-peek')
       navBtn.innerHTML = '&#9776;'
     }
   }
@@ -60,12 +57,6 @@ function EXCOriginalsSideNavbar(props) {
   })
   useEffect(() => {
     scrollHandler()
-  }, [])
-  useEffect(() => {
-    window.addEventListener('resize', resizeHandler)
-    return () => {
-      window.removeEventListener('resize', resizeHandler)
-    }
   })
 
   return (

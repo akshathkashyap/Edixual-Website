@@ -9,12 +9,15 @@
 
 .infocard-text {
   cursor: default;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   width: 50%;
 }
 
 .infocard-heading {
   position: relative;
+  /* added font */
+  font-family: 'Outfit', sans-serif;
   font-size: 2.7rem;
   text-decoration: underline;
   color: var(--danger-color);

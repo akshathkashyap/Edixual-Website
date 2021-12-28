@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './EXCOriginalsVideosPage.css'
 
@@ -6,36 +6,97 @@ function EXCOriginalsVideosPage() {
     const videos = [
         {
             title: 'Showreels',
-            url: "https://www.youtube.com/embed/VxQDE5-JgTA?autoplay=1&mute=1",
-            list: [{name: 'Showreel 2019', url: "https://www.youtube.com/watch?v=z4Kjtf2aO6w&t=25s"}],
+            url: "https://www.youtube.com/embed/agoTVmCUh70?autoplay=1&mute=1",
+            list: [],
         },
         {
-            title: 'Events',
-            url: "https://www.youtube.com/embed/lYc1dOVl55M?autoplay=1&mute=1",
-            list: [{name: 'Ace Tech Exhibition - 2018 Day 2!', url: "https://www.youtube.com/watch?v=JWBARduPMmk"}, {name: 'Ace Tech Exhibition Day 1', url: "https://www.youtube.com/watch?v=8I4AuuG-Jas&t=1s"}, {name: 'Launch of New Range of GM Fans at JITO Udaan', url: "https://www.youtube.com/watch?v=-susUCCDqRw"}, {name: 'Abhinesh Weds Apekshita', url: "https://youtu.be/oup0gJBtVV4"}],
+            title: 'Zee Music',
+            url: "https://www.youtube.com/embed/B4Dk77lF1SM?autoplay=1&mute=1",
+            list: [],
         },
         {
-            title: 'Brands',
-            url: "https://www.youtube.com/embed/QVoXKg2jMn0?autoplay=1&mute=1",
-            list: [{name: 'ICICI Suna kya case study', url: "https://youtu.be/U2uZ_qOjx40"}, {name: 'syska final render', url: "https://youtu.be/P7g-ilaLyMk"}, {name: 'Meme Compilation #1 | Sajjad Khan', url: "https://youtu.be/GBPCs7k_OCw",}],
+            title: 'Sush and Yohan',
+            url: "https://www.youtube.com/embed/g-OgMcLChBI?autoplay=1&mute=1",
+            list: [
+                {
+                    name: 'Friendship Mashup 2021 - Sush & Yohan', 
+                    url: "https://www.youtube.com/watch?v=9gQzPpBxTbY",
+                }, 
+                {
+                    name: '2020 YEAR END MASHUP - SUSH & YOHAN (BEST 120+ SONGS OF 2020)', 
+                    url: "https://youtu.be/GLCa7SQV4eg",
+                }, 
+                {
+                    name: 'Meme Compilation #1 | Sajjad Khan', 
+                    url: "https://youtu.be/GBPCs7k_OCw",
+                }
+            ],
         },
         {
-            title: 'Restaurents and Clubs',
-            url: "https://www.youtube.com/embed/NL6O9qVeuP4?autoplay=1&mute=1",
-            list: [{name: "The Stadium Bar Valentine's day Aftermovie", url: "https://youtu.be/BqOeaX51qmI"}, {name: 'Roti & Grill Menu Overview (EdiXual Creations version)', url: "https://youtu.be/kbeUq9-Fl50"}],
+            title: 'Karry Renes',
+            url: "https://www.youtube.com/embed/8Zwslpwx_NE?autoplay=1&mute=1",
+            list: [
+                {
+                    name: 'Karry Renes - COMIGO (ft. Madhurxo) | EXC Originals',
+                    url: "https://youtu.be/WP-XXzu_W70",
+                },
+                {
+                    name: 'Karry Renes - TuneCore Flip The Beat Challenge (Feat. Ritviz)',
+                    url: "https://youtu.be/9K1Gca92feU",
+                }, 
+                {
+                    name: 'Karry Renes - PANCHI (Feat. Pratyaksh Rajbhatt)', 
+                    url: "https://youtu.be/nQ5VBywSXdA",
+                }, 
+                {
+                    name: 'Karry Renes - Mujhse Bura Na Koi (Feat. Akansha Tripathi)', 
+                    url: "https://youtu.be/HkmIKclAlFY",
+                }
+            ],
         },
         {
-            title: 'Vlogs',
-            url: "https://www.youtube.com/embed/kmpU6jbUrlc?autoplay=1&mute=1",
-            list: [{name: 'Mohsin Khan’s Birthday in Singapore | Halloween 2019', url: "https://youtu.be/cwvM3b4enzA"}, {name: '2 WEDDINGS IN 1 DAY! Mumbai & Surat |', url: "https://www.youtube.com/watch?v=JKUC9BhscrI&t=428s"}, {name: 'How to Style Joggers | Simple & Easy Ways', url: "https://www.youtube.com/watch?v=Hcj157xfb00&t"}, {name: 'WHEN YOU LOVE YOUR CAR TOO MUCH', url: "https://youtu.be/O6XjbIOwXOI"}],
+            title: 'Pratyaksh Rajbhatt',
+            url: "https://www.youtube.com/embed/Ucfs9nO6BO4?autoplay=1&mute=1",
+            list: [],
         },
         {
-            title: 'Personal projects',
-            url: "https://www.youtube.com/embed/Vuq4fgjAJhM?autoplay=1&mute=1",
-            list: [{name: 'MNM Collaring Drive with #TeamEXC', url: "https://youtu.be/wobPZMynFb4"}, {name: 'Project Funny News', url: "https://youtu.be/gZfDtDBXk5Y"}, {name: 'Office Inauguration | EdiXual Creations & Dynamic Events', url: "https://youtu.be/4bKtBhU2anU"}],
+            title: 'Mohit Modanwal',
+            url: "https://www.youtube.com/embed/COmiOH58ja4?autoplay=1&mute=1",
+            list: [
+                {
+                    name: 'Woh Ladki Hai Kahan | Dil Chahta Hai | Mohit Modanwal | Saif Ali Khan, Sonali Kulkarni | Happy Music',
+                    url: "https://youtu.be/ZohRUv2EyOE",
+                },
+                {
+                    name: 'Heartless X Rooh | Mohit Modanwal Lit Remix - Karry Renes',
+                    url: "https://youtu.be/LHAEPnrp4I4",
+                }, 
+                {
+                    name: 'AE KASH | MOHIT MODANWAL | SACH KEHTE HAIN | AKSHAY KUMAR | REPRISE VERSION', 
+                    url: "https://youtu.be/0inwXEbfthM",
+                },
+            ],
         },
-
+        {
+            title: 'Lockdown Made Me Do It',
+            url: "https://www.youtube.com/embed/OKgI8GKGkkE?autoplay=1&mute=1",
+            list: [
+                {
+                    name: 'LockDown Visuals',
+                    url: "https://www.youtube.com/watch?v=doaRxgf2ylc",
+                },
+                {
+                    name: 'Thandi Hawa | Ritviz | Lost Stories Remix | Visuals',
+                    url: "https://www.youtube.com/watch?v=RR6-6BECB_E",
+                },
+            ],
+        },
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
+
     return (
         <div className="videos-page section-container">
         <h1 className="section-title">videos</h1>
@@ -48,7 +109,7 @@ function EXCOriginalsVideosPage() {
                         <ul>
                             {video.list.map((listItem) => {
                                 return (
-                                    <li onClick={() => {window.open(listItem.url)}}>{listItem.name}</li>
+                                    <li key={`${listItem.name}`} onClick={() => {window.open(listItem.url)}}>{listItem.name}</li>
                                 )
                             })}
                         </ul>

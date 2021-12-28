@@ -39,6 +39,7 @@
 .card-image img {
   width: 15rem;
   height: 11.25rem;
+  object-fit: contain;
 }
 
 .card-details {

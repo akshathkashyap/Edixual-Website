@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './EdiXualCreationsPIDCard.css'
 
 function EdiXualCreationsPIDCard(props) {
-  const headings = ["Graphic designing, Illustrations", "Editing", "GIFs"]
+  const headings = ["Graphic designing and Illustrations", "Editing", "GIFs"]
   const headingIndex = headings.indexOf(props.heading)
   const gdiData = [
     {

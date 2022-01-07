@@ -19,6 +19,10 @@ function EXCOriginalsVideosPage() {
             url: "https://www.youtube.com/embed/g-OgMcLChBI?autoplay=1&mute=1",
             list: [
                 {
+                    name: '2021 YEAR END MASHUP - SUSH & YOHAN (BEST 130+ SONGS OF 2021)', 
+                    url: "https://youtu.be/uX7PFOsG4F4",
+                },
+                {
                     name: 'Friendship Mashup 2021 - Sush & Yohan', 
                     url: "https://www.youtube.com/watch?v=9gQzPpBxTbY",
                 }, 

@@ -36,7 +36,7 @@ function EdiXualCreationsPageInfo(props) {
       "illustrationCall": false,
     },
     {
-      "heading": "Graphic designing, Illustrations",
+      "heading": "Graphic designing and Illustrations",
       "headingInfo": ["Graphic design is a craft where professionals create visual content to communicate messages. By applying visual hierarchy and page layout techniques, designers use typography and pictures to meet users’ specific needs and focus on the logic of displaying elements in interactive designs, to optimize the user experience.", "An illustration can explain an idea even without the text nearby. People who look at the picture should see the story, 'read' it as they would read the text. To tell a story with an illustration means to convey some meaning, to explain a certain context only with the help of an image."],
       "headingImg": "gdi_title",
       "illustrationCall": true,
@@ -99,7 +99,7 @@ function EdiXualCreationsPageInfo(props) {
     return (
       <div className='work-slider'>
         <div className='work-slider-titles'>
-          <h1 onClick={() => clickHandler(0)}>Graphic designing, Illustrations<span className='underline'></span></h1>
+          <h1 onClick={() => clickHandler(0)}>Graphic designing and Illustrations<span className='underline'></span></h1>
           <h1 onClick={() => clickHandler(1)}>Editing</h1>
           <h1 onClick={() => clickHandler(2)}>GIFs</h1>
         </div>

@@ -94,6 +94,12 @@
   flex-shrink: 0;
 }
 
+.card-container-btn .dot-dot-dot a {
+  position: relative;
+  display: flex;
+  width: 3rem;
+}
+
 .card-container-btn .dot-dot-dot span {
   height: 0.5rem;
   width: 0.5rem;

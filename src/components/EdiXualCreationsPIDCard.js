@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 import './EdiXualCreationsPIDCard.css'
 
@@ -58,6 +59,7 @@ function EdiXualCreationsPIDCard(props) {
     window.open(link)
   }
   const serviceHandler = (service) => {
+    console.log(service)
     window.open("https://www.edixual.com/EdiXualCreations/work")
   }
 
@@ -80,9 +82,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(0)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>
@@ -107,9 +111,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(1)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>
@@ -134,9 +140,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(2)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>

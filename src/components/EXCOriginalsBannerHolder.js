@@ -97,7 +97,7 @@ function EXCOriginalsBannerHolder() {
               <button className="banner-btn left" onClick={() => nextBanner(false)}>&#x276E;</button>
               <button className="banner-btn top right" onClick={toggleInfo}>i</button>
               <button className="banner-btn right" onClick={() => nextBanner(true)}>&#x276F;</button>
-              <p className="banner-disclaimer">These artworks are not official & are made for reference purpose only. We do not hold any rights for the images / logos used above.</p>
+              <p className="banner-disclaimer">{banner.index === 0 ? '' : 'These artworks are not official & are made for reference purpose only. We do not hold any rights for the images / logos used above.'}</p>
             </div>
           )
         })}

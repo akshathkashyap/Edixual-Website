@@ -19,20 +19,16 @@ function EXCOriginalsVideosPage() {
             url: "https://www.youtube.com/embed/g-OgMcLChBI?autoplay=1&mute=1",
             list: [
                 {
-                    name: '2021 YEAR END MASHUP - SUSH & YOHAN (BEST 130+ SONGS OF 2021)', 
+                    name: '2021 YEAR END MASHUP - SUSH & YOHAN (BEST 130+ SONGS OF 2021)',
                     url: "https://youtu.be/uX7PFOsG4F4",
                 },
                 {
-                    name: 'Friendship Mashup 2021 - Sush & Yohan', 
+                    name: 'Friendship Mashup 2021 - Sush & Yohan',
                     url: "https://www.youtube.com/watch?v=9gQzPpBxTbY",
-                }, 
+                },
                 {
-                    name: '2020 YEAR END MASHUP - SUSH & YOHAN (BEST 120+ SONGS OF 2020)', 
+                    name: '2020 YEAR END MASHUP - SUSH & YOHAN (BEST 120+ SONGS OF 2020)',
                     url: "https://youtu.be/GLCa7SQV4eg",
-                }, 
-                {
-                    name: 'Meme Compilation #1 | Sajjad Khan', 
-                    url: "https://youtu.be/GBPCs7k_OCw",
                 }
             ],
         },
@@ -47,13 +43,13 @@ function EXCOriginalsVideosPage() {
                 {
                     name: 'Karry Renes - TuneCore Flip The Beat Challenge (Feat. Ritviz)',
                     url: "https://youtu.be/9K1Gca92feU",
-                }, 
+                },
                 {
-                    name: 'Karry Renes - PANCHI (Feat. Pratyaksh Rajbhatt)', 
+                    name: 'Karry Renes - PANCHI (Feat. Pratyaksh Rajbhatt)',
                     url: "https://youtu.be/nQ5VBywSXdA",
-                }, 
+                },
                 {
-                    name: 'Karry Renes - Mujhse Bura Na Koi (Feat. Akansha Tripathi)', 
+                    name: 'Karry Renes - Mujhse Bura Na Koi (Feat. Akansha Tripathi)',
                     url: "https://youtu.be/HkmIKclAlFY",
                 }
             ],
@@ -74,11 +70,15 @@ function EXCOriginalsVideosPage() {
                 {
                     name: 'Heartless X Rooh | Mohit Modanwal Lit Remix - Karry Renes',
                     url: "https://youtu.be/LHAEPnrp4I4",
-                }, 
+                },
                 {
-                    name: 'AE KASH | MOHIT MODANWAL | SACH KEHTE HAIN | AKSHAY KUMAR | REPRISE VERSION', 
+                    name: 'AE KASH | MOHIT MODANWAL | SACH KEHTE HAIN | AKSHAY KUMAR | REPRISE VERSION',
                     url: "https://youtu.be/0inwXEbfthM",
                 },
+                {
+                    name: 'MOHIT MODANWAL | SUPERHIT AUDIO JUKEBOX 2021',
+                    url: "https://www.youtube.com/watch?v=7nJnTNLP2Ak",
+                }
             ],
         },
         {

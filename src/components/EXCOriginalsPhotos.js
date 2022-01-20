@@ -17,17 +17,17 @@ function EXCOriginalsPhotos() {
     },
     {
       "albumIndex": "2",
-      "albumName": "Raghav Meattle",
+      "albumName": "Raghav Meattle, Musician",
       "albumLink": "RaghavMeattle",
     },
     {
       "albumIndex": "3",
-      "albumName": "Alvira Photoshoot",
+      "albumName": "Alvira Rana, Actress",
       "albumLink": "AlviraPhotoshoot",
     },
     {
       "albumIndex": "4",
-      "albumName": "Kanika, Photoshoot",
+      "albumName": "Kanika's Portfolio'",
       "albumLink": "KanikaPhotoshoot",
     },
     {

@@ -16,7 +16,8 @@ function EXCOriginalsClients() {
                 "https://frontrow.co.in/",
                 "https://www.youtube.com/c/Subtlesleeves",
                 "https://www.aegonlife.com/",
-                "https://www.timexindia.com/",]
+                "https://www.timexindia.com/",
+                "https://nextdot.co.in/",]
 
   const clientRef = useRef()
   const clickHandler = (link) => {
@@ -145,6 +146,12 @@ function EXCOriginalsClients() {
           <img src={ process.env.PUBLIC_URL + '/images/Timex_Logo.jpg' } alt="Timex" />
           <div className="client-info" onClick={() => clickHandler(13)}>
             <p>Timex</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Nextdot_Logo.jpg' } alt="Nextdot" />
+          <div className="client-info" onClick={() => clickHandler(14)}>
+            <p>Nextdot</p>
           </div>
         </div>
       </div>

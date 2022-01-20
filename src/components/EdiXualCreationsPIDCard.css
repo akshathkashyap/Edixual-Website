@@ -39,7 +39,6 @@
 .card-image img {
   width: 15rem;
   height: 11.25rem;
-  object-fit: contain;
 }
 
 .card-details {
@@ -92,12 +91,6 @@
   display: flex;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.card-container-btn .dot-dot-dot a {
-  position: relative;
-  display: flex;
-  width: 3rem;
 }
 
 .card-container-btn .dot-dot-dot span {

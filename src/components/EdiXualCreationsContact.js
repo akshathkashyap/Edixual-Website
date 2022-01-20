@@ -72,7 +72,7 @@ function EdiXualCreationsContact() {
       </div>
       <div className='form-container'>
         <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.0265256230905!2d72.82417561412566!3d19.194043753240916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7b8f108ace3%3A0xb6fcb399b949c48!2sEdiXual%20Creations!5e0!3m2!1sen!2sin!4v1634713756588!5m2!1sen!2sin" allowFullScreen="" loading="lazy"></iframe>
-        <p>Meet us at our office.</p>
+        <p>Meet us at our office</p>
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 import './EXCOriginalsVideos.css'
 
@@ -30,9 +29,7 @@ function EXCOriginalsVideos() {
         <iframe src="https://www.youtube.com/embed/1TkAeCl7LVg?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <iframe src="https://www.youtube.com/embed/doaRxgf2ylc?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <div id="videoBtnCtn">
-          <Link to={'/EXCOriginals/WhatHaveWeDone/Videos'}>
-            <button id="viewAll">view all</button>
-          </Link>
+          <button id="viewAll" onClick={() => {window.open("https://www.youtube.com/channel/UCK-C8phxPQ_uFfax-0J4xFA/featured")}}>view all</button>
         </div>
       </div>
     </div>

@@ -19,12 +19,9 @@
   /* added font */
   font-family: 'Outfit', sans-serif;
   font-size: 2.7rem;
+  text-decoration: underline;
   color: var(--danger-color);
   z-index: 1;
-}
-
-.infocard-heading h1 {
-  font-weight: 100;
 }
 
 .infocard-heading-info {

@@ -19,12 +19,12 @@ function EXCOriginalsFooter() {
         </div>
         <div className="info">
           <h1>E-MAIL</h1>
-          <p>edixual@gmail.com</p>
+          <p>info@edixual.com</p>
         </div>
         <div className="info">
           <h1>NEWSLETTER</h1>
           <p>Website is is still in the soft launch phase, so there might be some hiccups...</p>
-          <p>Checkout Sush and Yohan Year End Mashup in COMING UP NEXT page.</p>
+          <p>Checkout our COMING UP NEXT! page to to stay updated with our work.</p>
         </div>
         <div className="info">
           <h1>SERVICES</h1>

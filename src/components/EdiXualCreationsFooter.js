@@ -52,7 +52,7 @@ function EdiXualCreationsFooter() {
           </div>
           <div className='footer-link-container'>
             <span></span>
-            <p onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>EMAIL :  info@edixual.com</p>
+            <p onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>EMAIL :  edixual@gmail.com</p>
           </div>
         </div>
       </div>

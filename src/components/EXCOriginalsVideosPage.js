@@ -33,6 +33,11 @@ function EXCOriginalsVideosPage() {
             ],
         },
         {
+          title: 'Masaba Gupta',
+          url: "https://www.youtube.com/embed/jgMrjcGPpnA?autoplay=1&mute=1",
+          list: [],
+      },
+        {
             title: 'Karry Renes',
             url: "https://www.youtube.com/embed/8Zwslpwx_NE?autoplay=1&mute=1",
             list: [

@@ -11,16 +11,16 @@ function EXCOriginalsBannerHolder() {
     "des": "Looop Lapeta is an upcoming Bollywood film directed by Aakash Bhatia and jointly produced by Sony Pictures Films India, Ellipsis Entertainment and Aayush Maheshwari. It features Taapsee Pannu and Tahir Raj Bhasin in the lead roles. It is scheduled for release on 22 October 2021.",
     },
     {"index": 1,
+    "bannerName": "Adhbut",
+    "bannerSrc": "CUAdbhut.jpg",
+    "bannerDPSrc": "CUAdbhutSQ.jpg",
+    "des": "Are you a supernatural thriller fan? Nawazuddin Siddiqui and Shreya Dhanwanthary are all set to spook you with their next film titled Adbhut.",
+    },
+    {"index": 2,
     "bannerName": "Tape Recorder",
     "bannerSrc": "CUTapeRecorder.jpg",
     "bannerDPSrc": "CUTapeRecorderSQ.jpg",
     "des": "Tape Recorder is an upcoming Indian Short Film directed by Aniket Sritava, produced by EXC Originals. It is planned to be released by Jan 2022.",
-    },
-    {"index": 2,
-    "bannerName": "Year-End Mashup (2021)",
-    "bannerSrc": "CUYearEndMashup(2021).jpg",
-    "bannerDPSrc": "CUYearEndMashup(2021)SQ.jpg",
-    "des": "Year-End Mashup by Sush & Yohan is a grand project made every year! Year-End Mashup 2020 received 1.3 million views 60k+ likes to date. EXC Originals in collaboration with various visual editors come together to bring the project to life.",
     },
     {"index": 3,
     "bannerName": "Gal Mitthi Bol × Kiss Me More",
@@ -97,7 +97,7 @@ function EXCOriginalsBannerHolder() {
               <button className="banner-btn left" onClick={() => nextBanner(false)}>&#x276E;</button>
               <button className="banner-btn top right" onClick={toggleInfo}>i</button>
               <button className="banner-btn right" onClick={() => nextBanner(true)}>&#x276F;</button>
-              <p className="banner-disclaimer">{banner.index === 0 ? '' : 'These artworks are not official & are made for reference purpose only. We do not hold any rights for the images / logos used above.'}</p>
+              <p className="banner-disclaimer">These artworks are not official & are made for reference purpose only. We do not hold any rights for the images / logos used above.</p>
             </div>
           )
         })}

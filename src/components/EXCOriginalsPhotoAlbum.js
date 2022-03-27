@@ -19,17 +19,17 @@ function EXCOriginalsPhotoAlbum() {
       "albumSize" : "9"
     },
     {
-      "albumName": "Raghav Meattle",
+      "albumName": "Raghav Meattle, Musician",
       "albumPre" : "RM",
       "albumSize" : "8"
     },
     {
-      "albumName": "Alvira Photoshoot",
+      "albumName": "Alvira Rana, Actress",
       "albumPre" : "AV",
       "albumSize" : "25"
     },
     {
-      "albumName": "Kanika, Photoshoot",
+      "albumName": "Kanika's Portfolio",
       "albumPre" : "KP",
       "albumSize" : "12"
     },

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 import './EdiXualCreationsPIDCard.css'
 
@@ -7,34 +8,34 @@ function EdiXualCreationsPIDCard(props) {
   const headingIndex = headings.indexOf(props.heading)
   const gdiData = [
     {
-      "title": "Graphic designing project",
-      "details": "I was a project done for company 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "Graphic designing",
+      "details": "Custom graphic design for Kajal Mahajan, Social media Influencer",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.edixual.com/EdiXualCreations/work",
+      "imgName": "graphics_hero",
     },
     {
-      "title": "Illustration project",
-      "details": "I was a project done for company 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "title": "Illustration",
+      "details": "An Illustrationm made for Chirag Havelia, Director - Havelia Ventures Pvt Ltd",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.edixual.com/EdiXualCreations/work",
+      "imgName": "illustrations_hero",
     },
   ]
   const editingData = [
     {
-      "title": "Editing project",
-      "details": "I was a project done for company 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "Video Editing",
+      "details": "Company anual showreel for 2020",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.youtube.com/watch?v=VxQDE5-JgTA",
+      "imgName": "editing1_hero",
     },
     {
-      "title": "Editing project",
-      "details": "I was a project done for company 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Photo Editing",
+      "details": "Photo edit for thumbnail for a youtube video",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.instagram.com/edixual/p/B-zHeernRJb/?utm_medium=copy_link",
+      "imgName": "editing2_hero",
     },
   ]
   const gifData = [
@@ -42,23 +43,24 @@ function EdiXualCreationsPIDCard(props) {
       "title": "GIF",
       "details": "I was a project done for company 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.edixual.com/EdiXualCreations/work",
+      "imgName": "graphics_hero",
     },
     {
       "title": "Good GIF",
       "details": "I was a project done for company 2. Lorem ipsum dolor sit amet, consectetur adipiscing.",
       "link": "View Project",
-      "linkTo": "https://www.edixual.com/",
-      "imgName": "aboutUs_title",
+      "linkTo": "https://www.edixual.com/EdiXualCreations/work",
+      "imgName": "graphics_hero",
     },
   ]
 
   const linkHandler = (link) => {
-    console.log(link)
+    window.open(link)
   }
   const serviceHandler = (service) => {
     console.log(service)
+    window.open("https://www.edixual.com/EdiXualCreations/work")
   }
 
   if (headingIndex === 0) {
@@ -70,7 +72,7 @@ function EdiXualCreationsPIDCard(props) {
               <div key={`${gdi.title}${index}`} className='card'>
                 <div className='card-title'>{gdi.title}</div>
                 <div className='card-image'>
-                  <img src={ process.env.PUBLIC_URL + `/images/${gdi.imgName}.jpg` } alt="Card Image" />
+                  <img src={ process.env.PUBLIC_URL + `/images/album/EdiXualCreationsWork/${gdi.imgName}.jpg` } alt="Card Image" />
                 </div>
                 <div className='card-details'>{gdi.details}</div>
                 <div className='card-link'>
@@ -80,9 +82,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(0)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>
@@ -97,7 +101,7 @@ function EdiXualCreationsPIDCard(props) {
               <div key={`${editing.title}${index}`} className='card'>
                 <div className='card-title'>{editing.title}</div>
                 <div className='card-image'>
-                  <img src={ process.env.PUBLIC_URL + `/images/${editing.imgName}.jpg` } alt="Card Image" />
+                  <img src={ process.env.PUBLIC_URL + `/images/album/EdiXualCreationsWork/${editing.imgName}.jpg` } alt="Card Image" />
                 </div>
                 <div className='card-details'>{editing.details}</div>
                 <div className='card-link'>
@@ -107,9 +111,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(1)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>
@@ -124,7 +130,7 @@ function EdiXualCreationsPIDCard(props) {
               <div key={`${gif.title}${index}`} className='card'>
                 <div className='card-title'>{gif.title}</div>
                 <div className='card-image'>
-                  <img src={ process.env.PUBLIC_URL + `/images/${gif.imgName}.jpg` } alt="Card Image" />
+                  <img src={ process.env.PUBLIC_URL + `/images/album/EdiXualCreationsWork/${gif.imgName}.jpg` } alt="Card Image" />
                 </div>
                 <div className='card-details'>{gif.details}</div>
                 <div className='card-link'>
@@ -134,9 +140,11 @@ function EdiXualCreationsPIDCard(props) {
             )
           })
         }
-        <div onclick={() => serviceHandler(2)} className='card-container-btn'>
+        <div className='card-container-btn'>
           <div className='dot-dot-dot'>
-            <span></span><span></span><span></span>
+            <Link to={'/EdiXualCreations/work'}>
+              <span></span><span></span><span></span>
+            </Link>
             <div className='btn-tooltip'>View All</div>
           </div>
         </div>

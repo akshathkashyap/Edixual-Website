@@ -27,7 +27,7 @@ function EXCOriginalsPhotos() {
     },
     {
       "albumIndex": "4",
-      "albumName": "Kanika's Portfolio'",
+      "albumName": "Kanika's Portfolio",
       "albumLink": "KanikaPhotoshoot",
     },
     {

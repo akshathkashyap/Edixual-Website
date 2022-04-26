@@ -3,21 +3,30 @@ import React, { useEffect, useRef } from 'react'
 import './EXCOriginalsClients.css'
 
 function EXCOriginalsClients() {
-  const clientsLinks = ["https://www.yashrajfilms.com/",
-                "https://www.sonypicturesnetworks.com/",
-                "https://www.instagram.com/ellipsisentertainment/?hl=en",
-                "http://www.applauseentertainment.in/",
-                "https://theglitch.in/",
-                "https://www.facebook.com/KibbootzFilms/",
-                "https://www.mindshiftinteractive.com/",
-                "https://www.imarketz.in/",
-                "https://www.youtube.com/channel/UCOvZZg0EyZxG-xQ_FA2M3Qw",
-                "https://www.youtube.com/channel/UCAAPcQLflmxYGDcRwC4bJKw",
-                "https://frontrow.co.in/",
-                "https://www.youtube.com/c/Subtlesleeves",
-                "https://www.aegonlife.com/",
-                "https://www.timexindia.com/",
-                "https://nextdot.co.in/",]
+  const clientsLinks = [
+    "https://www.yashrajfilms.com/",
+    "https://www.sonypicturesnetworks.com/",
+    "https://www.instagram.com/ellipsisentertainment/?hl=en",
+    "http://www.applauseentertainment.in/",
+    "https://www.instagram.com/sabbir24x7/",
+    "https://www.zee5.com/tv-shows/zee-tv/0-9-zeetv",
+    "https://www.zee.com/products-platforms-music/",
+    "https://www.youtube.com/c/jjustmusic",
+    "https://www.ting.in/",
+    "https://theglitch.in/",
+    "https://nextdot.co.in/",
+    "https://www.mindshiftinteractive.com/",
+    "https://www.imarketz.in/",
+    "https://www.instagram.com/khan_mohsinkhan/",
+    "https://www.timexindia.com/",
+    "https://www.aegonlife.com/",
+    "https://frontrow.co.in/",
+    "https://www.instagram.com/soufflemumbai/",
+    "https://www.youtube.com/channel/UCOvZZg0EyZxG-xQ_FA2M3Qw",
+    "https://www.youtube.com/c/Subtlesleeves",
+    "https://www.youtube.com/channel/UCAAPcQLflmxYGDcRwC4bJKw",
+    "https://www.facebook.com/KibbootzFilms/",
+  ]
 
   const clientRef = useRef()
   const clickHandler = (link) => {
@@ -89,69 +98,111 @@ function EXCOriginalsClients() {
           </div>
         </div>
         <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Glitch_Logo.jpg' } alt="The Glitch" />
+          <img src={ process.env.PUBLIC_URL + '/images/SKF_Logo.jpg' } alt="Sabbir Khan Films" />
           <div className="client-info" onClick={() => clickHandler(4)}>
+            <p>Sabbir Khan Films</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/ZTV_Logo.jpg' } alt="Zee TV" />
+          <div className="client-info" onClick={() => clickHandler(5)}>
+            <p>Zee TV</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/ZMC_Logo.jpg' } alt="Zee Music Company" />
+          <div className="client-info" onClick={() => clickHandler(6)}>
+            <p>Zee Music Company</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/JM_Logo.jpg' } alt="Jjust Music" />
+          <div className="client-info" onClick={() => clickHandler(7)}>
+            <p>Jjust Music</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Ting_Logo.jpg' } alt="Ting" />
+          <div className="client-info" onClick={() => clickHandler(8)}>
+            <p>Ting</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Glitch_Logo.jpg' } alt="The Glitch" />
+          <div className="client-info" onClick={() => clickHandler(9)}>
             <p>The Glitch</p>
           </div>
         </div>
         <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Kibbootz_Logo.jpg' } alt="Kibbootz Films" />
-          <div className="client-info" onClick={() => clickHandler(5)}>
-            <p>Kibbootz Films</p>
+          <img src={ process.env.PUBLIC_URL + '/images/Nextdot_Logo.jpg' } alt="Next Dot" />
+          <div className="client-info" onClick={() => clickHandler(10)}>
+            <p>Nextdot</p>
           </div>
         </div>
         <div className="client">
           <img src={ process.env.PUBLIC_URL + '/images/MindShift_Logo.jpg' } alt="MindShift Interactive" />
-          <div className="client-info" onClick={() => clickHandler(6)}>
+          <div className="client-info" onClick={() => clickHandler(11)}>
             <p>MindShift Interactive</p>
           </div>
         </div>
         <div className="client">
           <img src={ process.env.PUBLIC_URL + '/images/iMarketz_Logo.jpg' } alt="iMarketz" />
-          <div className="client-info" onClick={() => clickHandler(7)}>
+          <div className="client-info" onClick={() => clickHandler(12)}>
             <p>iMarketz</p>
           </div>
         </div>
         <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Sandy_Logo.jpg' } alt="Sandy" />
-          <div className="client-info" onClick={() => clickHandler(8)}>
-            <p>SUSH AND YOHAN</p>
-          </div>
-        </div>
-        <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Karry_Logo.jpg' } alt="Karry" />
-          <div className="client-info" onClick={() => clickHandler(9)}>
-            <p>KARRY RENES</p>
-          </div>
-        </div>
-        <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Frontrow_Logo.jpg' } alt="Frontrow" />
-          <div className="client-info" onClick={() => clickHandler(10)}>
-            <p>Frontrow</p>
-          </div>
-        </div>
-        <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Subtle_Logo.jpg' } alt="Subtle Sleeves" />
-          <div className="client-info" onClick={() => clickHandler(11)}>
-            <p>Subtle Sleeves</p>
-          </div>
-        </div>
-        <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Aegon_Logo.jpg' } alt="Aegon life" />
-          <div className="client-info" onClick={() => clickHandler(12)}>
-            <p>Aegon life</p>
+          <img src={ process.env.PUBLIC_URL + '/images/MK_Logo.jpg' } alt="Mohsin Khan" />
+          <div className="client-info" onClick={() => clickHandler(13)}>
+            <p>Mohsin Khan</p>
           </div>
         </div>
         <div className="client">
           <img src={ process.env.PUBLIC_URL + '/images/Timex_Logo.jpg' } alt="Timex" />
-          <div className="client-info" onClick={() => clickHandler(13)}>
+          <div className="client-info" onClick={() => clickHandler(14)}>
             <p>Timex</p>
           </div>
         </div>
         <div className="client">
-          <img src={ process.env.PUBLIC_URL + '/images/Nextdot_Logo.jpg' } alt="Nextdot" />
-          <div className="client-info" onClick={() => clickHandler(14)}>
-            <p>Nextdot</p>
+          <img src={ process.env.PUBLIC_URL + '/images/Aegon_Logo.jpg' } alt="Aegon life" />
+          <div className="client-info" onClick={() => clickHandler(15)}>
+            <p>Aegon life</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Frontrow_Logo.jpg' } alt="Frontrow" />
+          <div className="client-info" onClick={() => clickHandler(16)}>
+            <p>Frontrow</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Souffle_Logo.jpg' } alt="Souffle" />
+          <div className="client-info" onClick={() => clickHandler(17)}>
+            <p> Soufflé I S'il Vous Plaît</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Sandy_Logo.jpg' } alt="Sandy" />
+          <div className="client-info" onClick={() => clickHandler(18)}>
+            <p>Sush & Yohan</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Subtle_Logo.jpg' } alt="Subtle Sleeves" />
+          <div className="client-info" onClick={() => clickHandler(19)}>
+            <p>Subtle Sleeves</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Karry_Logo.jpg' } alt="Karry" />
+          <div className="client-info" onClick={() => clickHandler(20)}>
+            <p>Karry Renes</p>
+          </div>
+        </div>
+        <div className="client">
+          <img src={ process.env.PUBLIC_URL + '/images/Kibbootz_Logo.jpg' } alt="Kibbootz Films" />
+          <div className="client-info" onClick={() => clickHandler(21)}>
+            <p>Kibbootz Films</p>
           </div>
         </div>
       </div>

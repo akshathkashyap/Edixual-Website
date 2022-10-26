@@ -6,6 +6,7 @@
   scroll-snap-type: x mandatory;
   height: calc(90vw / 2.39);
   width: 90vw;
+  margin-top: 10vh;
   overflow-x: hidden;
 }
 

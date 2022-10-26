@@ -27,8 +27,7 @@ function EXCOriginalsVideos() {
       <h1 className="section-title">videos</h1>
       <div className="video-grid">
         <iframe src="https://www.youtube.com/embed/agoTVmCUh70?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        <iframe src="https://www.youtube.com/embed/1TkAeCl7LVg?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        <iframe src="https://www.youtube.com/embed/doaRxgf2ylc?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/-81slD2knvM?mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <div id="videoBtnCtn">
           <Link to={'/EXCOriginals/WhatHaveWeDone/Videos'}>
             <button id="viewAll">view all</button>

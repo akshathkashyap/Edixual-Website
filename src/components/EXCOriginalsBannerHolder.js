@@ -10,18 +10,6 @@ function EXCOriginalsBannerHolder() {
     "bannerDPSrc": "CUAdbhutSQ.jpg",
     "des": "Are you a supernatural thriller fan? Nawazuddin Siddiqui and Shreya Dhanwanthary are all set to spook you with their next film titled Adbhut.",
     },
-    {"index": 1,
-    "bannerName": "Tape Recorder",
-    "bannerSrc": "CUTapeRecorder.jpg",
-    "bannerDPSrc": "CUTapeRecorderSQ.jpg",
-    "des": "Tape Recorder is an upcoming Indian Short Film directed by Aniket Sritava, produced by EXC Originals. It is planned to be released by Jan 2022.",
-    },
-    {"index": 2,
-    "bannerName": "Gal Mitthi Bol × Kiss Me More",
-    "bannerSrc": "CUGalMitthiBol×KissMeMore.jpg",
-    "bannerDPSrc": "CUGalMitthiBol×KissMeMoreSQ.jpg",
-    "des": "Year-End Mashup by Sush & Yohan is a grand project made every year! Year-End Mashup 2020 received 1.3 million views 60k+ likes to date. EXC Originals in collaboration with various visual editors come together to bring the project to life.",
-    },
   ]
   const bannerContRef = useRef()
   const nextBanner = (scroll) => {

@@ -10,13 +10,18 @@ function EXCOriginalsVideosPage() {
             list: [],
         },
         {
-            title: 'Zee Music',
-            url: "https://www.youtube.com/embed/B4Dk77lF1SM?autoplay=1&mute=1",
+            title: 'Zee Music Company',
+            url: "https://www.youtube.com/embed/B4Dk77lF1SM?mute=1",
+            list: [],
+        },
+        {
+            title: 'Looop Lapeta',
+            url: "https://www.youtube.com/embed/bRN5m0sBJy8",
             list: [],
         },
         {
             title: 'Sush and Yohan',
-            url: "https://www.youtube.com/embed/g-OgMcLChBI?autoplay=1&mute=1",
+            url: "https://www.youtube.com/embed/g-OgMcLChBI?mute=1",
             list: [
                 {
                     name: '2021 YEAR END MASHUP - SUSH & YOHAN (BEST 130+ SONGS OF 2021)',
@@ -34,7 +39,7 @@ function EXCOriginalsVideosPage() {
         },
         {
             title: 'Karry Renes',
-            url: "https://www.youtube.com/embed/8Zwslpwx_NE?autoplay=1&mute=1",
+            url: "https://www.youtube.com/embed/8Zwslpwx_NE?mute=1",
             list: [
                 {
                     name: 'Karry Renes - COMIGO (ft. Madhurxo) | EXC Originals',
@@ -56,12 +61,12 @@ function EXCOriginalsVideosPage() {
         },
         {
             title: 'Pratyaksh Rajbhatt',
-            url: "https://www.youtube.com/embed/Ucfs9nO6BO4?autoplay=1&mute=1",
+            url: "https://www.youtube.com/embed/Ucfs9nO6BO4?mute=1",
             list: [],
         },
         {
             title: 'Mohit Modanwal',
-            url: "https://www.youtube.com/embed/COmiOH58ja4?autoplay=1&mute=1",
+            url: "https://www.youtube.com/embed/COmiOH58ja4?mute=1",
             list: [
                 {
                     name: 'Woh Ladki Hai Kahan | Dil Chahta Hai | Mohit Modanwal | Saif Ali Khan, Sonali Kulkarni | Happy Music',
@@ -83,7 +88,7 @@ function EXCOriginalsVideosPage() {
         },
         {
             title: 'Lockdown Made Me Do It',
-            url: "https://www.youtube.com/embed/OKgI8GKGkkE?autoplay=1&mute=1",
+            url: "https://www.youtube.com/embed/OKgI8GKGkkE?mute=1",
             list: [
                 {
                     name: 'LockDown Visuals',

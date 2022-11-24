@@ -5,7 +5,7 @@ import './EXCOriginalsSideNavbar.css'
 
 function EXCOriginalsSideNavbar(props) {
   const links = ["https://www.youtube.com/channel/UCK-C8phxPQ_uFfax-0J4xFA/featured",
-                "https://www.instagram.com/edixual/",
+                "https://www.instagram.com/exc_og/",
                 "https://www.facebook.com/pg/edixual/community/?ref=page_internal",
                 "https://twitter.com/Edi_Xual"]
   const [navBarOpen, setNavBarOpen] = useState(false)

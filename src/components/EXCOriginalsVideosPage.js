@@ -16,7 +16,7 @@ function EXCOriginalsVideosPage() {
         },
         {
             title: 'Looop Lapeta',
-            url: "https://www.youtube.com/embed/bRN5m0sBJy8",
+            url: "https://www.youtube.com/embed/4ZuFQGBgPQQ?mute=1",
             list: [],
         },
         {
@@ -52,10 +52,6 @@ function EXCOriginalsVideosPage() {
                 {
                     name: 'Karry Renes - PANCHI (Feat. Pratyaksh Rajbhatt)',
                     url: "https://youtu.be/nQ5VBywSXdA",
-                },
-                {
-                    name: 'Karry Renes - Mujhse Bura Na Koi (Feat. Akansha Tripathi)',
-                    url: "https://youtu.be/HkmIKclAlFY",
                 }
             ],
         },
@@ -97,6 +93,32 @@ function EXCOriginalsVideosPage() {
                 {
                     name: 'Thandi Hawa | Ritviz | Lost Stories Remix | Visuals',
                     url: "https://www.youtube.com/watch?v=RR6-6BECB_E",
+                },
+            ],
+        },
+        {
+            title: 'Wedding',
+            url: "https://www.youtube.com/embed/HYuKN_dGdqU?mute=1",
+            list: [
+                {
+                    name: 'Baraat',
+                    url: "https://youtu.be/weYRrEeDRko",
+                },
+                {
+                    name: 'Geet - Sangeet',
+                    url: "https://youtu.be/u6uk36j9nSo",
+                },
+                {
+                    name: 'Yash & Manali- Haldi Full',
+                    url: "https://youtu.be/OtIxLpA70NA",
+                },
+                {
+                    name: 'Ankit & Jayati Wedding Full Video',
+                    url: "https://youtu.be/tvXI_mKDdkc",
+                },
+                {
+                    name: 'Wedding Highlights (Edited By EdiXual Creation) For Moving Moments',
+                    url: "https://youtu.be/rXFzh0aagx8",
                 },
             ],
         },

@@ -6,8 +6,17 @@ function EXCOriginalsVideosPage() {
     const videos = [
         {
             title: 'Showreels',
-            url: "https://www.youtube.com/embed/agoTVmCUh70?autoplay=1&mute=1",
-            list: [],
+            url: "https://www.youtube.com/embed/SCk1cr7Pgl0?autoplay=1&mute=1",
+            list: [
+                {
+                    name: 'EdiXual Creations Showreel 2020',
+                    url: "https://youtu.be/VxQDE5-JgTA",
+                },
+                {
+                    name: 'EXC Showreel',
+                    url: "https://youtu.be/z4Kjtf2aO6w",
+                }
+            ],
         },
         {
             title: 'Zee Music Company',
